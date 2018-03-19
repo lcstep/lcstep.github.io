@@ -13,11 +13,31 @@ body {
 			opacity: 1;
 			margin: 0 auto;
 		}
-		a { color: #19FEBE; }
+		a {
+			color: #19FEBE;
+			transition: .2s;
+		}
+		h1 {
+			font-size: 20px;
+			font-weight: 400;
+			display: inline;
+
+		}
 		h1 a  {
 			color: #fff;
 			text-decoration: none;
+			background-image: linear-gradient(to right, rgba(255,255,255,0) 50%, #19FEBE 50%);
+  		background-position: -0% 0;
+  		background-size: 200% auto;
+			transition: background-position 0.3s ease-out;
 		}
+
+		h1 a:hover {
+			color: #000;
+			background-position: -99.99% 0;
+
+		}
+
 
 		p {
 			color: #666;
@@ -25,11 +45,7 @@ body {
 header {
 	margin-bottom: 50px;
 }
-		h1 {
-			font-size: 20px;
-			font-weight: 400;
-			display: inline;
-		}
+
 		.back {
 			float: right;
 		}
