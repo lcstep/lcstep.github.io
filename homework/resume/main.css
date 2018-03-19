@@ -1,8 +1,47 @@
 body {
-			background: #000;
+			background: #222;
 			color: #fff;
 			font-family: 'Inconsolata', monospace;
+			margin: 100px;
+			background: rgba(0,0,0,1);
+		}
+		video {
+			position: fixed;
+			
+			min-width: 100%;
+			min-height: 100%;
+			z-index: -1;
+			opacity: 1;
+			margin: 0 auto;
 		}
 		a { color: #19FEBE; }
+		h1 a  {
+			color: #fff;
+			text-decoration: none;
+		}
 
-		p { color: #aaa; }
+		p {
+			color: #666;
+		}
+header {
+	margin-bottom: 50px;
+}
+		h1 {
+			font-size: 20px;
+			font-weight: 400;
+			display: inline;
+		}
+		.back {
+			float: right;
+		}
+		h2 {
+			font-size: 18px;
+			font-weight: 700;
+		}
+		h3 {
+			font-weight: 400;
+			font-size: 16px;
+		}
+li {
+	margin: 20px 0;
+}
