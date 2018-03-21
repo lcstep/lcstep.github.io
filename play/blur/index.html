@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
 <head>
 	<title>Birdie!</title>
@@ -14,15 +13,16 @@
 
 	}
 
-	div { 
+	div {
 		width: 100%;
 		height: 100%;
 		position: absolute;
-		background: url("birdie.jpg"); 
+		background: url("birdie.jpg");
 		transition: .8s ease;
 		background-size: cover;
 		transform: scale(1);
 		opacity:0;
+		cursor: url("egg-cursor.png"), pointer;
 	}
 
 	#center {
@@ -36,7 +36,7 @@
 		cursor: url("bird-cursor.png"), pointer;
 	}
 
-	#center:hover + div { 
+	#center:hover + div {
 		opacity: 1;
 		transform: scale(1.03);
 
@@ -48,6 +48,6 @@
 <body>
 	<span id="center"></span>
 	<div></div>
-	
+
 </body>
 </html>
