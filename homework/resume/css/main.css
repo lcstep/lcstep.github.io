@@ -1,5 +1,4 @@
 body {
-	background: #222;
 	color: #fff;
 	font-family: 'Inconsolata', monospace;
 	margin: 100px;
@@ -7,7 +6,6 @@ body {
 }
 video {
 	position: fixed;
-
 	left:0;
 	right:0;
 	bottom: 0;
@@ -26,27 +24,29 @@ video {
 a {
 	color: #19FEBE;
 	transition: .2s;
-}
+	}
+
+	a:hover {
+		color: #fff;
+	}
+
 h1 {
 	font-size: 20px;
 	font-weight: 400;
+	}
 
+	h1 a  {
+		color: #fff;
+		text-decoration: none;
+		background-image: linear-gradient(to right, rgba(255,255,255,0) 50%, #19FEBE 50%);
+		background-size: 200% auto;
+		transition: background-position 0.3s ease-out;
+		}
 
-}
-h1 a  {
-	color: #fff;
-	text-decoration: none;
-	background-image: linear-gradient(to right, rgba(255,255,255,0) 50%, #19FEBE 50%);
-	background-position: -0% 0;
-	background-size: 200% auto;
-	transition: background-position 0.3s ease-out;
-}
-
-h1 a:hover {
-	color: #000;
-	background-position: -99.99% 0;
-
-}
+		h1 a:hover {
+			color: #000;
+			background-position: -99.99% 0;
+		}
 
 
 p {
