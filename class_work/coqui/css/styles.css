@@ -1,4 +1,21 @@
 body {
 	background: black;
 	color: white;
+	marging: 16px;
+	padding: 16px;
 }
+
+p {
+	border: 2px dotted hotpink;
+	margin: 10px;
+	padding: 10px;
+}
+
+a {
+	color: hotpink;
+}
+
+a:hover {
+	color: yellow;
+}
+

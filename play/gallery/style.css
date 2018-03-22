@@ -10,12 +10,14 @@ body {
 .gallery {
 	display: flex;
 	flex-wrap: wrap;
+    margin: 0px 1px;
 }
 .images {
-	flex: 33.3333%;
+	flex: calc(33.3333% - 6px);
 	padding-bottom: 33.3333%;
 	background-size: cover;
     background-position: center center;
+    margin: 1px;
 }
 
 .img1 { background-image: url("images/1.jpg"); }
@@ -30,8 +32,7 @@ body {
 
 @media screen and (max-width: 800px) {
     .images {
-        -ms-flex: 50%;
-        flex: 50%;
+        flex: calc(50% - 4px);
         max-width: 50%;
         padding-bottom: 50%;
     }
