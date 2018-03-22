@@ -18,15 +18,15 @@ body {
     background-position: center center;
 }
 
-.img1 { background-image: url("images/img1.jpg"); }
-.img2 { background-image: url("images/img2.jpg"); }
-.img3 { background-image: url("images/img3.jpg"); }
-.img4 { background-image: url("images/img4.jpg"); }
-.img5 { background-image: url("images/img5.jpg"); }
-.img6 { background-image: url("images/img6.jpg"); }
-.img7 { background-image: url("images/img7.jpg"); }
-.img8 { background-image: url("images/img8.jpg"); }
-.img9 { background-image: url("images/img9.jpg"); }
+.img1 { background-image: url("/images/img1.jpg"); }
+.img2 { background-image: url("/images/img2.jpg"); }
+.img3 { background-image: url("/images/img3.jpg"); }
+.img4 { background-image: url("/images/img4.jpg"); }
+.img5 { background-image: url("/images/img5.jpg"); }
+.img6 { background-image: url("/images/img6.jpg"); }
+.img7 { background-image: url("/images/img7.jpg"); }
+.img8 { background-image: url("/images/img8.jpg"); }
+.img9 { background-image: url("/images/img9.jpg"); }
 
 @media screen and (max-width: 800px) {
     .images {
