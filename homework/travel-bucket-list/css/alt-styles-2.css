@@ -52,22 +52,19 @@ a {
 
 section {
 	width: 90%;
-	height: 30%;
 	font-size: 14px;
 	line-height: 22px;
 	margin: 40px auto;
 	border: 1px solid #384568;
-	transition: .3s ease;
+	transition: flex .5s;
 	display: flex;
-	position: relative;
 	}
 	section:hover{
 		cursor: pointer;
 		border: 1px solid #4574ED;
 	}
 	section .content {
-		flex: 60%;
-		float: left;
+		flex: 30%;
 		}
 	section h2 {
 		padding: 40px 40px 10px 40px;
@@ -82,9 +79,9 @@ section {
 	left: 0;
 	top: 0;
 	background-size: cover;
-	float: left;
-	flex: 30%;
-	padding-bottom: 30%
+	flex: 60%;
+	transition: flex .5s;
+	padding-bottom: 30%;
 }	
 
 #maui  .photo {
@@ -96,4 +93,43 @@ section {
 }
 #aspen .photo {
 	background-image: url("../img/aspen.jpg");
+}
+
+@media screen and (max-width: 1200px) {
+   section {
+   	flex-wrap: wrap;
+   }
+   .photo {
+        flex: 40%;
+        padding-bottom: 30%;
+    }
+    .content {
+    	flex: 50%;
+    }
+}
+
+@media (max-width: 960px) {
+   section {
+   	flex-wrap: wrap;
+   }
+   .photo {
+        flex: 20%;
+        padding-bottom: 10%;
+    }
+    .content {
+    	flex: 70%;
+    }
+}
+
+@media (max-width: 800px) {
+   section {
+   	flex-wrap: wrap;
+   }
+   .photo {
+        flex: 100%;
+        padding-bottom: 40%;
+    }
+    .content {
+    	flex: 100%;
+    }
 }
