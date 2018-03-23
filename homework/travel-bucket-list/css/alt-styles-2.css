@@ -109,19 +109,17 @@ section {
 }
 
 @media (max-width: 960px) {
-   section {
-   	flex-wrap: wrap;
-   }
+   
    .photo {
-        flex: 20%;
-        padding-bottom: 10%;
+        flex: 10%;
+        padding-bottom: 30%;
     }
     .content {
-    	flex: 70%;
+    	flex: 80%;
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 810px) {
    section {
    	flex-wrap: wrap;
    }
