@@ -1,14 +1,30 @@
 body {
-	background: black;
-	color: white;
-	marging: 16px;
-	padding: 16px;
+	background: white;
+	color: #000;
+	margin: 0;
 }
+
+h1 {
+	text-align: center;
+}
+
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+	.container img {
+		width: 100%;
+		
+	}
+
 
 p {
 	border: 2px dotted hotpink;
 	margin: 10px;
 	padding: 10px;
+	text-align: center;
 }
 
 a {
@@ -19,3 +35,8 @@ a:hover {
 	color: yellow;
 }
 
+.container ul {
+	list-style: none;
+	text-align: center;
+	padding: 0;
+}
