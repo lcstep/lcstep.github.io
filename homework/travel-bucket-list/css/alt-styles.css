@@ -1,0 +1,85 @@
+body {
+	margin: 0;
+	background-color: #091433;
+	font-family: 'Lora', serif;
+	color: #fff;
+	transition: scroll .3s;
+}
+
+.container {
+	
+}
+
+header {
+	
+	padding: 60px;
+	text-align: center;
+	}	
+	h1 {
+		font-weight: 400;
+		margin: 0;
+	}
+h2 {
+	margin: 0;
+}
+
+ nav {
+ 	padding: 20px 0;
+ 	font-family: 'Helvetica', sans-serif;
+ 	font-size: 14px;
+ 	}
+	nav ul {
+		list-style: none;
+		text-align: center;
+		padding: 0;
+		}
+		nav ul li {
+			display: inline;
+			margin: 0 20px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			font-weight: 700;
+		}
+
+a {
+	color: #0F72ED;
+	text-decoration: none;
+}
+
+section {
+	padding: 30px;
+	text-align: center;
+	font-size: 14px;
+	line-height: 22px;
+	position: relative;
+	padding: 100px;
+	background-size: cover;
+	}
+	section .content {
+		position: relative;
+	}
+	section h2 {
+		margin: 15px;
+		font-weight: 400;
+		font-size: 25px;
+	}
+
+.overlay {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: linear-gradient(to bottom, rgba(0,0,0,.1), rgba(0,0,0,.8));
+	}	
+
+#maui  {
+	background-image: url("../img/maui.jpg");
+}
+
+#reykjavik {
+	background-image: url("../img/reykjavik.jpg");
+}
+#aspen {
+	background-image: url("../img/aspen.jpg");
+}
