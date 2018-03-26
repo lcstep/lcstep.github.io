@@ -22,7 +22,7 @@ a {
 
 
 header {
-	padding: 60px 20px 00px 20px;
+	padding: 60px 0px 0px 0px;
 	text-align: center;
 	}	
 
@@ -58,7 +58,7 @@ nav {
 
 /*---Cards---*/
 
-section {
+section.cards {
 	width: 90%;
 	line-height: 23px;
 	margin: 40px auto;
@@ -68,22 +68,22 @@ section {
 	box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, .05);
 	}
 
-	section:hover{
-		cursor: pointer;
+	section.cards:hover{
+		
 		box-shadow: 0px 10px 30px 1px rgba(0, 0, 0, .2);
 		transform: translateY(-5px);
 		}
 
-	section .content {
+	section.cards .content {
 		flex: 30%;
 		padding: 40px;
 		}
 
-	section h2 {
+	section.cards h2 {
 		font-size: 25px;
 		}
 
-	section p {
+	section.cards p {
 			opacity: .6;
 			font-size: 14px;
 			}
@@ -94,7 +94,11 @@ section {
 	flex: 60%;
 	transition: flex .5s ease-in-out;
 	padding-bottom: 30%;
-	}	
+	}
+section.cards a { 
+		color: #333; }	
+		section:hover a { 
+		color: #FF4223; }	
 
 	#hawaii  .photo {
 		background-image: url("../img/maui2.jpg");
@@ -106,6 +110,67 @@ section {
 	#alberta .photo {
 		background-image: url("../img/alberta.jpg");
 		}
+	#tuscany .photo {
+		background-image: url("../img/tuscany.jpg");
+		}
+
+
+/*---Iceland---*/
+
+body#iceland header {
+	display: flex;
+	padding: 0;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.hero-img {
+	background-image: url("../img/iceland.jpg");
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	flex: 50%;
+}
+
+.hero-content {
+	flex: 50%;
+}
+
+main {
+	color: #fff;
+	padding: 60px;
+	display: flex;
+	background: #33393C;
+}
+
+section.iceland {
+	flex: 70%;
+	margin: 0 auto;
+	font-size: 18px;
+	line-height: 32px;
+	
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+}
+
+aside {
+	flex: 30%;
+}
+
+@media only screen and (max-width: 800px) {
+   body#iceland header {
+   	flex-wrap: wrap;
+   }
+   .hero-img {
+        flex: 100%;
+        height: auto;
+        padding-bottom: 50%;
+    }
+    .hero-content {
+    	flex: 100%;
+    }
+}
 
 
 /*---Responsive---*/
