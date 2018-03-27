@@ -176,9 +176,7 @@ aside {
 /*---Responsive---*/
 
 @media only screen and (max-width: 1200px) {
-   section {
-	   flex-wrap: wrap;
-	   }
+ 
    .photo {
         flex: 40%;
         padding-bottom: 30%;
