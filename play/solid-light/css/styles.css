@@ -46,6 +46,7 @@ h1 {
 		align-items: center;
 		margin: 0 auto;
 		border: 15px solid rgba(255,255,255,.15);
+		color: #fff;
 }
 
 .content {
