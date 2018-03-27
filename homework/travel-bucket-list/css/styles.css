@@ -43,6 +43,12 @@ h2 {
 a {
 	color: #0F72ED;
 	text-decoration: none;
+	transition: .3s;
+}
+
+a:hover {
+	color: #61b7ed;
+	text-decoration: underline;
 }
 
 section {
@@ -76,4 +82,10 @@ section {
 }
 #aspen {
 	background-color: #5F6C89;
+}
+
+footer  {
+	padding: 40px;
+	text-align: center;
+	font-style: italic;
 }
