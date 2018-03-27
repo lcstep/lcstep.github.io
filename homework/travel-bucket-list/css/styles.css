@@ -14,14 +14,12 @@ header {
 	padding: 30px;
 	text-align: center;
 	}	
-	h1 {
-		font-weight: 400;
-		margin: 0;
-	}
-h2 {
+	
+
+h1, h2 {
+	font-weight: 400;
 	margin: 0;
 }
-
  nav {
  	padding: 20px 0;
  	font-family: 'Helvetica', sans-serif;
@@ -49,7 +47,7 @@ a {
 a:hover {
 	color: #61b7ed;
 	text-decoration: underline;
-}
+	}
 
 section {
 	padding: 30px;
@@ -61,16 +59,15 @@ section {
 	section h2 {
 		text-align: center;
 		margin: 15px;
-		font-weight: 400;
-		
 		font-size: 25px;
 	}
 	section img {
 		max-height: 180px;
+		max-width: 100%;
 	}
 	section p {
 		text-align: left;
-		opacity: .5;
+		opacity: .6;
 
 	}
 
