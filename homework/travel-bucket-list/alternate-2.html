@@ -8,79 +8,84 @@
 	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon"/>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript">
-	$(document).ready(function(){
+		$(document).ready(function(){
   		// Add smooth scrolling to all links
   		$("a").on('click', function(event) {
 
     // Make sure this.hash has a value before overriding default behavior
-    	if (this.hash !== "") {
+    if (this.hash !== "") {
       // Prevent default anchor click behavior
-      	event.preventDefault();
+      event.preventDefault();
 
       // Store hash
-      	var hash = this.hash;
+      var hash = this.hash;
 
       // Using jQuery's animate() method to add smooth page scroll
       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
-        scrollTop: $(hash).offset().top
+      	scrollTop: $(hash).offset().top
       }, 800, function(){
-   
+
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
-      });
+    });
     } // End if
-  });
 });
-	</script>
+  	});
+  </script>
 </head>
 <body>
-<div class="container">
-	<header>
-		<h1>My 2017 Travel Bucket List</h1>
-		<nav>
-		<ul>
-			<li><a href="#hawaii">Hawaii</a></li>
-			<li><a href="#iceland">Iceland</a></li>
-			<li><a href="#alberta">Alberta</a></li>
-			<li><a href="#tuscany">Tuscany</a></li>
-		</ul>
-	</nav>
-	</header>
-	
-	<section class="cards" id="hawaii">
-		
-		<div class="photo"></div>
-		<div class="content">
-			<h2>Hawaii</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies ut tortor in venenatis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut blandit urna sit amet varius lobortis. Morbi malesuada est risus, ut dapibus nulla blandit finibus. </p>
-		</div>
-		
-	</section>
-	<section class="cards" id="iceland">
-			
-			<a href="iceland.html" class="photo"></a>
+	<div class="container">
+		<header>
+			<h1>My 2017 Travel Bucket List</h1>
+			<nav>
+				<ul>
+					<li><a href="#hawaii">Hawaii</a></li>
+					<li><a href="#iceland">Iceland</a></li>
+					<li><a href="#alberta">Alberta</a></li>
+					<li><a href="#tuscany">Tuscany</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<section class="cards" id="hawaii">
+
+			<div class="photo"></div>
 			<div class="content">
-				<h2><a href="iceland.html">Iceland</a></h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies ut tortor in venenatis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut blandit urna sit amet varius lobortis. Morbi malesuada est risus, ut dapibus nulla blandit finibus. Maecenas vel porta augue. In ut volutpat sapien, vitae semper ex. </p>
+				<h2>Hawaii</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies ut tortor in venenatis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut blandit urna sit amet varius lobortis. Morbi malesuada est risus, ut dapibus nulla blandit finibus. </p>
 			</div>
 
-	</section>
-	<section class="cards" id="alberta">
-		<div class="photo"></div>
-		<div class="content">
-			<h2>Alberta</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies ut tortor in venenatis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut blandit urna sit amet varius lobortis. Morbi malesuada est risus.</p>
-		</div>
-	</section>
-	<section class="cards" id="tuscany">
-		<div class="photo"></div>
-		<div class="content">
-			<h2>Tuscany</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies ut tortor in venenatis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut blandit urna sit amet varius lobortis. Morbi malesuada est risus.</p>
-		</div>
-	</section>
-</div>
+		</section>
+		<a href="iceland.html">
+			<section class="cards" id="iceland">
+
+				<div class="photo"></div>
+				<div class="content">
+					<h2>Iceland</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies ut tortor in venenatis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut blandit urna sit amet varius lobortis. Morbi malesuada est risus, ut dapibus nulla blandit finibus. Maecenas vel porta augue. In ut volutpat sapien, vitae semper ex. </p>
+				</div>
+
+			</section>
+		</a>
+		<a href="#">
+			<section class="cards" id="alberta">	
+				<div class="photo"></div>
+				<div class="content">
+					<h2>Alberta</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies ut tortor in venenatis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut blandit urna sit amet varius lobortis. Morbi malesuada est risus.</p>
+				</div>
+
+			</section>
+		</a>
+		<section class="cards" id="tuscany">
+			<div class="photo"></div>
+			<div class="content">
+				<h2>Tuscany</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies ut tortor in venenatis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut blandit urna sit amet varius lobortis. Morbi malesuada est risus.</p>
+			</div>
+		</section>
+	</div>
 
 </body>
 </html>
