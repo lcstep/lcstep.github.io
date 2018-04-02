@@ -1,0 +1,70 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Helvetica', sans-serif;
+}
+main {
+	padding: 40px;
+}
+section {
+	margin: 20px 0;
+}
+.top, .left, aside, footer, .right, article {
+  background: lightgray;
+  border: 1px solid gray;
+}
+.top, footer {
+	height: 150px;
+
+}
+.container {
+  display: flex;
+  height: 300px;
+
+}
+
+/*---TWO COLUMN---*/
+
+#two-column .left {
+	flex: 60%;
+	margin-right: 20px;
+}
+
+#two-column aside {
+	flex: 40%;
+}
+
+/*---THREE COLUMN---*/
+
+#three-column aside {
+	flex: 10%;
+}
+
+#three-column .left {
+	flex: 50%;
+	margin: 0 20px;
+}
+
+/*---MARKETING---*/
+
+
+#simple-marketing .left {
+	margin-right: 20px;
+}
+#simple-marketing .left, 
+#simple-marketing .right {
+	flex: 50%;
+}
+.little-container {
+	display: flex;
+	height: 100px;
+}
+
+article {
+	flex: 30%;
+	height: 100px;
+	margin-right: 20px
+}
+article:last-child {
+	margin-right: 0px;
+}

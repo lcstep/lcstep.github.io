@@ -8,12 +8,15 @@ body {
 
 }
 
-header {
-	padding: 20px 0;
-}
+/*---TEXT STYLES---*/
+
 h1, h2, h3, h5 { 
 	font-weight: 300;
 	margin: 0; 
+}
+
+h1 {
+	font-size: 60px;
 }
 
 h3 {
@@ -26,20 +29,28 @@ h5 {
 	letter-spacing: 1px;
 }
 
-img {
-	width: 100%;
-}
-h1, nav ul li a:hover {
+h1, article a, footer a {
 	color: #dd0000;
 }
 
-h1 {
-	font-size: 60px;
+
+a:hover {
+	color: #000;
 }
 
-nav ul {
+
+/*---HEADER---*/
+
+header {
+	padding: 20px 0;
+}
+
+/*---NAVIGATION---*/
+
+nav ul, footer ul {
 	padding: 0;
 }
+
 nav ul li {
 	display: inline-block;
 	padding: 0 20px 0 0;
@@ -48,3 +59,36 @@ nav ul li {
 nav ul li a {
 	color: #ccc;
 }
+
+
+
+/*---ARTICLES---*/
+
+article {
+	padding: 40px 0;
+	border-bottom: 1px solid #eee;
+}
+
+.readmore { text-align: right; }
+	.readmore a {
+		text-decoration: none;
+		font-weight: 700;
+		}
+
+img {
+	width: 100%;
+}
+
+
+
+/*---FOOTER---*/
+
+footer {
+	margin: 40px 0;
+}
+footer ul li {
+	display: inline-block;
+	padding-right: 5px;
+}
+
+

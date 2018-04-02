@@ -1,0 +1,70 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Helvetica', sans-serif;
+}
+main {
+	padding: 40px;
+}
+
+section {
+	margin: 20px 0;
+}
+
+.logo, li, footer, article, .big {
+  background: lightgray;
+  border: 1px solid gray;
+}
+header, footer {
+	height: 150px;
+
+}
+header {
+	display: flex;
+	height: 100px;
+	align-items: center;
+}
+
+.logo {
+	flex: 30%;
+	height: 100%;›
+}
+
+nav {
+	flex: 70%;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin-left: 60px;
+	display: flex;
+	margin: 0;
+	height: 100%;
+	margin-left: 20%;
+}
+
+
+nav ul li {
+	flex: 10%;
+	margin-left: 20px;
+	height: 40px;
+}
+
+.big {
+	height: 300px;
+}
+
+.little-container {
+	display: flex;
+	height: 100px;
+}
+
+article {
+	flex: 30%;
+	height: 100px;
+	margin-right: 20px
+}
+article:last-child {
+	margin-right: 0px;
+}
