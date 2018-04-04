@@ -1,8 +1,4 @@
-body, html {
-  height: 100%;
-  margin: 0;
-  font-family: 'Helvetica', sans-serif;
-}
+
 main {
 	padding: 40px;
 }
@@ -11,10 +7,6 @@ section {
 	margin: 20px 0;
 }
 
-.logo, li, footer, article, .big {
-  background: lightgray;
-  border: 1px solid gray;
-}
 header, footer {
 	height: 150px;
 
@@ -23,15 +15,16 @@ header {
 	display: flex;
 	height: 100px;
 	align-items: center;
+	justify-content: space-between;
 }
 
 .logo {
-	flex: 30%;
+	width: 30%;
 	height: 100%;›
 }
 
 nav {
-	flex: 70%;
+	width: 55%;
 }
 
 ul {
@@ -41,7 +34,6 @@ ul {
 	display: flex;
 	margin: 0;
 	height: 100%;
-	margin-left: 20%;
 }
 
 
@@ -57,7 +49,7 @@ nav ul li {
 
 .little-container {
 	display: flex;
-	height: 100px;
+	
 }
 
 article {

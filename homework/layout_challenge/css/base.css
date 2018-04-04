@@ -1,0 +1,10 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Helvetica', sans-serif;
+}
+
+.graybox {
+  background: lightgray;
+  border: 1px solid gray;
+}
