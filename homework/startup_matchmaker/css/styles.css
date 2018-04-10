@@ -70,6 +70,14 @@ header ul li a {
 	padding: 10px;
 }
 
+.banner s {
+	color: #aaa;
+}
+
+.banner u {
+	color: yellow;
+}
+
 .hero {
 	background-image: url("../img/coworking.jpg");
 	background-size: cover;
