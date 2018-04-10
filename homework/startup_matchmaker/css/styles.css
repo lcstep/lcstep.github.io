@@ -80,6 +80,7 @@ header ul li a {
 
 .hero {
 	background-image: url("../img/coworking.jpg");
+	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
 	height: 500px;
