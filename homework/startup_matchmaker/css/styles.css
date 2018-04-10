@@ -107,6 +107,7 @@ button {
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-weight: 700;
+	width: 100%;
 }
 
 .yellow {
@@ -114,7 +115,7 @@ button {
 }
 .gray {
 	background-color: #ccc;
-	width: 100%;
+	
 }
 
 
