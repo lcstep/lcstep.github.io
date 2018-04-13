@@ -1,0 +1,29 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+* { box-sizing: border-box; }
+
+.cover {
+	height: 100vh;
+	background-image: url(../img/1.png);
+	background-size: cover;
+	background-position: center;
+}
+
+section {
+	display: flex;
+}
+.right {
+	background-image: url(../img/2.png);
+	background-size: cover;
+	background-position: center;
+	flex: 1;
+	height: 80vh;
+	margin: 2em;
+}
+
+.left {
+	flex: 1;
+}
