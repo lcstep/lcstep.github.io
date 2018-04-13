@@ -14,11 +14,14 @@ function reset() {
 	document.querySelector('#out').style.color = 'black';
 }
 
+
+
+
 function add10() {
 	var middle = document.querySelector('#out').innerHTML;
 	var middleNumber = Number(middle);
-	var positive = document.querySelector('#a10').innerHTML;
-	var positiveNumber = Number(positive);
+	// var positive = document.querySelector('#a10').innerHTML;
+	// var positiveNumber = Number(positive);
 	var total = middleNumber + 10;
 	document.querySelector('#out').innerHTML = total;
 
@@ -27,52 +30,39 @@ function add10() {
 function add20() {
 	var middle = document.querySelector('#out').innerHTML;
 	var middleNumber = Number(middle);
-	var positive = document.querySelector('#a20').innerHTML;
-	var positiveNumber = Number(positive);
 	var total = middleNumber + 20;
 	document.querySelector('#out').innerHTML = total;
-
 }
 
 function add30() {
 	var middle = document.querySelector('#out').innerHTML;
 	var middleNumber = Number(middle);
-	var positive = document.querySelector('#a30').innerHTML;
-	var positiveNumber = Number(positive);
 	var total = middleNumber + 30;
 	document.querySelector('#out').innerHTML = total;
-
 }
 
 function minus10() {
 	var middle = document.querySelector('#out').innerHTML;
 	var middleNumber = Number(middle);
-	var positive = document.querySelector('#a10').innerHTML;
-	var positiveNumber = Number(positive);
 	var total = middleNumber - 10;
 	document.querySelector('#out').innerHTML = total;
-
 }
 
 function minus20() {
 	var middle = document.querySelector('#out').innerHTML;
 	var middleNumber = Number(middle);
-	var positive = document.querySelector('#a20').innerHTML;
-	var positiveNumber = Number(positive);
 	var total = middleNumber - 20;
 	document.querySelector('#out').innerHTML = total;
-
 }
 
 function minus30() {
 	var middle = document.querySelector('#out').innerHTML;
 	var middleNumber = Number(middle);
-	var positive = document.querySelector('#a30').innerHTML;
-	var positiveNumber = Number(positive);
 	var total = middleNumber - 30;
 	document.querySelector('#out').innerHTML = total;
-
 }
+
+
 
 var red = document.querySelector('#red');
 var blue = document.querySelector('#blue');
