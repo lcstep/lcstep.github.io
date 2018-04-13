@@ -17,12 +17,21 @@ function reset() {
 }
 
 
-function add (e) {
+function add() {
 	var middle = document.querySelector('#out').innerHTML;
 	var middleNumber = Number(middle);
-	var ad10 = document.querySelectorAll('#ad10').innerHTML;
+	var content = document.querySelector('.plus:focus').innerHTML;
 	var plusNum = Number(content);
 	var total = middleNumber + plusNum;
+	document.querySelector('#out').innerHTML = total;
+
+}
+function sub() {
+	var middle = document.querySelector('#out').innerHTML;
+	var middleNumber = Number(middle);
+	var negContent = document.querySelector('.minus:focus').innerHTML;
+	var minusNum = Number(negContent);
+	var total = middleNumber + minusNum;
 	document.querySelector('#out').innerHTML = total;
 
 }

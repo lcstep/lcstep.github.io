@@ -9,14 +9,14 @@
 	display: flex;
 }
 
-.row div {
+.row button {
 	text-align: center;
 	width: 100px;
 	padding: 30px;
 	border: 1px dashed #252525;
 }
 
-.row div:hover {
+.row button:hover {
 	background-color: #cccccc;
 	cursor: pointer;
 }
