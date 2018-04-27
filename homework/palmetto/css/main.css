@@ -16,7 +16,9 @@ body {
 		font-size: 30px;
 	}
 
-p { color: #1C070A; }
+p { 
+	color: #1C070A;
+	line-height: 1.6; }
 
 .flex {
 	display: flex;
@@ -70,3 +72,36 @@ p { color: #1C070A; }
 .caption {
 	align-self: flex-start;
 }
+
+
+hr {
+	width: 80%;
+	border: 1px solid #CECECE;
+}
+
+.text p {
+	width: 50%;
+	padding: 40px;
+}
+
+hr.left {
+	margin-left: 0;
+}
+hr.right{
+	margin-right: 0;
+}
+
+.image-small {
+	display: grid;
+	grid-column-gap: 20px;
+	grid-template-columns: repeat(11, 1fr);
+}
+
+.image-small img {
+	grid-column: 7/11;
+	width: 795px;
+}
+
+
+
+
