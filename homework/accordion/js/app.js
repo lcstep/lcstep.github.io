@@ -1,5 +1,5 @@
 $( ".row" ).click(function(event) {
-	$(event.currentTarget).find(".wrapper:visible").slideToggle(600);
-	$(event.currentTarget).find(".wrapper:hidden").slideToggle(200);
+	$(event.currentTarget).find(".wrapper:visible").slideUp(800);
+	$(event.currentTarget).find(".wrapper:hidden").slideDown(300);
  });
 
