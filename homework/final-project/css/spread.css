@@ -1,0 +1,94 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Arsenal', sans-serif;;
+}
+
+main .video {
+	display: inline-block;
+	position: absolute;
+}
+
+
+
+main .vertical {
+	width: 25%;
+}
+
+main .horizontal{
+	width: 50%;
+}
+
+.horizontal video, .vertical video {
+	transition: opacity .5s;
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+
+.video.two {
+	left: 30%;
+	top: 50%;
+}
+
+.video.three {
+	left: 60%;
+	top: 20%;
+}
+.video.four {
+	left: 130%;
+	top: 100%;
+}
+.video.five {
+	left: 100%;
+	top: 30%;
+}
+.video.six {
+	left: 70%;
+	top: 90%;
+	
+}
+.video.seven {
+	left: 60%;
+	top: 20%;
+	display: none;
+}
+.video.eight {
+	left: 60%;
+	top: 20%;
+	display: none;
+}
+
+.video.nine {
+	left: 60%;
+	top: 20%;
+	display: none;
+}
+
+
+
+
+
+
+
+.featherlight:last-of-type {
+	background: rgba(255,255,255,.95);
+}
+
+.featherlight video {
+	height: 100vh;
+}
+
+.featherlight .featherlight-inner {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-end;
+	color: #000;
+}
+
+.featherlight p {
+	padding: 4em;
+}
