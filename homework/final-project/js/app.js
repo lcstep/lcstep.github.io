@@ -9,4 +9,9 @@ function hideVideo(e) {
 }
 
 
-$('.gallery').featherlightGallery();
+// $('.gallery').featherlightGallery();
+
+
+$(".video").hover(function(event){
+	$(event.currentTarget).find(".caption").toggle();
+})
