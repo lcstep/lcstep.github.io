@@ -23,9 +23,9 @@ $("#entry").submit(getInput);
 function getInput () {
 	event.preventDefault();
 	var newEntry = $("#newEntry").val();
-	// var entryNumber = parseInt(newEntry);
+	var entryNumber = parseInt(newEntry);
 	$("#newEntry").val(null);
-	total = total * newEntry;
+	total = total + entryNumber;
 
 	$("#entries").append("<p>" + newEntry + "</p>");
 	$("#total").html("$" + total);
