@@ -29,6 +29,7 @@ main {
 	width: 6000px;
 	height: 4000px;
 	transform: scale(1);
+	transform-origin: top left;
 }
 main .video {
 	display: inline-block;
