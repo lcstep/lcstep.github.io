@@ -19,19 +19,27 @@ $(".video").hover(function(event){
 $("#plus").click(zoomIn);
 $("#minus").click(zoomOut);
 
+
+
+
 function zoomIn () {
-	$("main").css("transform", "scale(1.2)");
+	var current = parseFloat($('main').css('transform').split(',')[3]);
+
+	var zoom = current * 1.1;
+	
+	$("main").css("transform", "scale(" + zoom + ")");
 }
 
 function zoomOut () {
-	$("main").css("transform", "scale(.8)");
+	var current = parseFloat($('main').css('transform').split(',')[3]);
+	var zoomOut = current * .9;
+	console.log(zoomOut);
+	$("main").css("transform", "scale(" + zoomOut + ")");
 }
 
+$( function() {
+    $( "main" ).draggable();
+  } );
 
-var scrollerObj = new Scroller(function(left, top, zoom) {
-	// apply coordinates/zooming
-}, {
-	scrollingY: false
-});
 
-scrollerObj.setDimensions(1000, 1000, 3000, 3000);
+
