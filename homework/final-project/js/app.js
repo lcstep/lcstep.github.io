@@ -28,10 +28,10 @@ function zoomOut () {
 }
 
 
-// var scrollerObj = new Scroller(function(left, top, zoom) {
-// 	// apply coordinates/zooming
-// }, {
-// 	scrollingY: false
-// });
+var scrollerObj = new Scroller(function(left, top, zoom) {
+	// apply coordinates/zooming
+}, {
+	scrollingY: false
+});
 
-// scrollerObj.setDimensions(1000, 1000, 3000, 3000);
+scrollerObj.setDimensions(1000, 1000, 3000, 3000);

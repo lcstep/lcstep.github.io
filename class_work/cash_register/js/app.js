@@ -27,6 +27,6 @@ function getInput () {
 	$("#newEntry").val(null);
 	total = total + entryNumber;
 
-	$("#entries").append("<p>" + newEntry + "</p>");
+	$("#entries").append("<tr><td></td><td>" + newEntry + "</td></tr>");
 	$("#total").html("$" + total);
 }
