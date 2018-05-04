@@ -27,5 +27,22 @@ $.ajax({
   url: 'http://api.citybik.es/citi-bike-nyc.json',
   success: function(stations) {
     console.log(stations)
+    
+    
+    var shortlist = stations.splice(0,50);
+    
+    shortlist.forEach(wrapStation);
+    function wrapStation(station) {
+    	// var freeBikes = station.bikes > 0;
+    	// console.log(freeBikes)
+    	var singles = "<li>" + station.name + "</li>"
+    	console.log(singles)
+    	$("#container ul").append(singles)
+    }
+
+   
   },
+
 });
+
+

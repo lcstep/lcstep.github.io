@@ -4,6 +4,25 @@ html, body {
   padding: 0;
 }
 
-#map{
-  // what do we need here?
-}
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+
+      button {
+      	position: absolute;
+      	z-index: 1;
+      	bottom: 0;
+      	left: 0;
+      	background-color: rgba(0,0,0,1);
+      	padding: 20px;
+      	color: #fff;
+      }
