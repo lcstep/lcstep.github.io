@@ -37,7 +37,7 @@
         var wallingford = {lat: 41.4570, lng: -72.8231	};
 
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 8,
+          zoom: 12,
           center: newyork,
           mapTypeId: 'terrain'
         });
@@ -75,29 +75,25 @@ $("button").click(function() {
 $.ajax({
   type: 'GET',
   url: 'https://api.citybik.es/v2/networks/citi-bike-nyc',
-  success: function(stations) {
-    console.log(stations)
+  success: function(citi) {
+    
 
-   stations.forEach(freeBikes)
-    function freeBikes(station) {
-      if (station.free > 0) {
-        return true
+     var stations = citi.network.stations;
+     console.log(stations);
+
+     stations.forEach(citiMarkers);
+
+
+     function citiMarkers(station) {
+        var longitude = station.longitude; 
+        console.log(longitude)
+        var latitude = station.latitude;
+        console.log(latitude);
+        var marker = new google.maps.Marker({
+          position: {latitude, longitude},
+          map: map
+        })
       }
-    }
-    var hasBikes = stations.filter(freeBikes);
-    console.log(hasBikes)
-    var shortlist = hasBikes.splice(0,50);
-    console.log(shortlist)
-    
-    
-    shortlist.forEach(wrapStation);
-    function wrapStation(station) {
-      
-      var singles = "<li>" + station.name + "</li>"
-
-      
-      $("#container ul").append(singles)
-    }
 
    
   
