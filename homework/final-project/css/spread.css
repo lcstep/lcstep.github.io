@@ -4,8 +4,10 @@
 
 body {
 	font-family: 'Arsenal', sans-serif;
-	/*width: 10000px;*/
-	/*overflow-x: hidden;*/
+	/*width: 10000px;
+	height: 10000px;*/
+	overflow-x: hidden;
+	position: absolute;
 }
 
 .zoom {
@@ -29,8 +31,9 @@ main {
 	transition: transform .3s ease-in-out;
 	width: 6500px;
 	height: 5000px;
-	transform: scale(1);
+	transform: scale(.6);
 	transform-origin: top left;
+
 }
 main .video {
 	display: inline-block;

@@ -1,8 +1,7 @@
 
+// HOVER TO PLAY VIDEO
 
-
-
-var figure = $(".video").hover( hoverVideo, hideVideo );
+$(".video").hover( hoverVideo, hideVideo );
 
 function hoverVideo(e) {  
     $('video', this).get(0).play(); 
@@ -12,22 +11,18 @@ function hideVideo(e) {
     $('video', this).get(0).pause(); 
 }
 
-$(".video").click(function(e) {
-	e.preventDefault();
-});
 
-// $('.gallery').featherlightGallery();
+// SHOW CAPTIONS
 
 
 $(".video").hover(function(event){
 	$(event.currentTarget).find(".caption").toggle();
-})
+});
+
+// ZOOM IN OUT
 
 $("#plus").click(zoomIn);
 $("#minus").click(zoomOut);
-
-
-
 
 function zoomIn () {
 	var current = parseFloat($('main').css('transform').split(',')[3]);
@@ -42,11 +37,35 @@ function zoomOut () {
 	$("main").css("transform", "scale(" + zoomOut + ")");
 }
 
+// DRAGGABLE
 
 $( function() {
     $( "body" ).draggable();
   } );
 
+
+// MOMENTUM
+
+var myImpetus = new Impetus({
+		source: 'body',
+		initialValues: [0,0],
+		friction: .93,
+		update: function(x, y) {
+			this.style.left = x + 'px';
+			this.style.top = y + 'px';
+		}
+
+	});
+
+
+// VIDEOS DON'T OPEN WHILE DRAGGING
+
+$(".video").click(function(e) {
+	e.preventDefault();
+});
+
+
+// SCROLL ZOOM
 
 // $(window).scroll(function() {
 //   var scroll = $(window).scrollTop();
