@@ -85,11 +85,13 @@ $.ajax({
 
 
      function citiMarkers(station) {
-        var longitude = station.longitude; 
-        console.log(longitude)
-        var latitude = station.latitude;
+        
+        var latitude = parseFloat(station.latitude);
         console.log(latitude);
-        var marker = new google.maps.Marker({
+        var longitude = parseFloat(station.longitude); 
+        console.log(longitude)
+
+        var markers = new google.maps.Marker({
           position: {latitude, longitude},
           map: map
         })
