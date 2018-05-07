@@ -54,11 +54,11 @@ $.ajax({
   type: 'GET',
   url: 'https://api.citybik.es/v2/networks/citi-bike-nyc',
   success: function(citi) {
-    console.log(citi)
+    // console.log(citi)
 
 
     var stations = citi.network.stations;
-    console.log(stations)
+    // console.log(stations)
 
     stations.forEach(freeBikes)
     function freeBikes(station) {
@@ -67,13 +67,13 @@ $.ajax({
       }
     }
     var hasBikes = stations.filter(freeBikes);
-    console.log(hasBikes)
+    // console.log(hasBikes)
    
     
       $("#bikes").change(function(){
         $("#container ul").empty();
         var bikeNum = parseInt($("select").val());
-        console.log(bikeNum)
+        // console.log(bikeNum)
 
         hasBikes.forEach(neededBikes)
         function neededBikes(station){
@@ -84,10 +84,10 @@ $.ajax({
         }
 
         var enoughBikes = hasBikes.filter(neededBikes);
-        console.log(enoughBikes);
+        // console.log(enoughBikes);
 
          var shortlist = enoughBikes.splice(0,50);
-        console.log(shortlist)
+        // console.log(shortlist)
          shortlist.forEach(wrapStation);
     function wrapStation(station) {
       
