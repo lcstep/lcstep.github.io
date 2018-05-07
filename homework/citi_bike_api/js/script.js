@@ -24,25 +24,36 @@
 
 $.ajax({
   type: 'GET',
-  url: 'http://api.citybik.es/citi-bike-nyc.json',
+  url: 'https://api.citybik.es/v2/networks/citi-bike-nyc',
+  xhrFields: { withCredentials: false },
+  crossDomain: false,
   success: function(stations) {
     console.log(stations)
+
+   stations.forEach(freeBikes)
+    function freeBikes(station) {
+      if (station.free > 0) {
+        return true
+      }
+    }
+    var hasBikes = stations.filter(freeBikes);
+    console.log(hasBikes)
+    var shortlist = hasBikes.splice(0,50);
+    console.log(shortlist)
     
-    
-    var shortlist = stations.splice(0,50);
     
     shortlist.forEach(wrapStation);
     function wrapStation(station) {
-    	// var freeBikes = station.bikes > 0;
-    	// console.log(freeBikes)
+    	
     	var singles = "<li>" + station.name + "</li>"
-    	console.log(singles)
+
+    	
     	$("#container ul").append(singles)
     }
 
    
-  },
-
+  
+}
 });
 
 

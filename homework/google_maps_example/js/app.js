@@ -32,9 +32,9 @@
 
       function initMap() {
         var newyork = {lat: 40.7128, lng: -74.0060	};
-        var wayland = {lat: 42.5678, lng: -77.5897	};
-        var hudson = {lat: 42.2529, lng: -73.7910	};
-        var rowe = {lat: 42.6934, lng: -72.8995	};
+        var newhaven = {lat: 41.3083, lng: -72.9279	};
+        var madison = {lat: 41.2960, lng: -72.5754	};
+        var wallingford = {lat: 41.4570, lng: -72.8231	};
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 8,
           center: newyork,
@@ -44,4 +44,21 @@
           position: newyork,
           map: map
         });
+        var marker2 = new google.maps.Marker({
+          position: newhaven,
+          map: map
+        });
+        var marker3 = new google.maps.Marker({
+          position: madison,
+          map: map
+        });
+        var marker3 = new google.maps.Marker({
+          position: wallingford,
+          map: map,
+          display: none
+
+        });
+
+        $("")
+
       }
