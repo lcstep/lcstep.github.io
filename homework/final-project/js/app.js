@@ -1,4 +1,11 @@
 
+$(".intro").click(function(){
+	$(".intro").fadeOut("slow");
+})
+
+
+
+
 // HOVER TO PLAY VIDEO
 
 $(".video").hover( hoverVideo, hideVideo );
@@ -63,6 +70,18 @@ var myImpetus = new Impetus({
 $(".video").click(function(e) {
 	e.preventDefault();
 });
+
+
+// sun
+
+$(document).mousemove(function(e){
+    $(".sun").css({
+      left:e.pageX - 1000, 
+      top:e.pageY - 1000
+    });
+
+});
+
 
 
 // SCROLL ZOOM
