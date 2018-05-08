@@ -4,9 +4,57 @@
 
 body {
 	font-family: 'Arsenal', sans-serif;
-	/*width: 10000px;*/
-	/*overflow-x: hidden;*/
+	/*width: 10000px;
+	height: 10000px;*/
+	overflow-x: hidden;
+	position: absolute;
+	
 }
+
+h1 { font-weight: 400; }
+.intro {
+	color: #F6C40D;
+	font-weight: 400;
+	background: rgb(246,232,13);
+  	background: radial-gradient(circle, rgba(246,232,13,1) 0%,  rgba(255,255,255,0) 50%);
+	background-repeat: no-repeat;
+	background-position: center;
+	
+	-webkit-animation: Gradient 6s 3 ease-in-out, Fade 5s 14s ease forwards;
+/*  -moz-animation: Gradient 6s ease-in-out infinite;
+	animation: Gradient 6s ease-in-out infinite; */
+	/*-webkit-animation: Fade 5s 10s ease;*/
+  	position: absolute;
+  	height: 100vh;
+  	width: 100vw;
+  	z-index: 10;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: center;
+}
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-size: 50%;
+	}
+	50% {
+		background-size: 100%;
+	}
+	100% {
+		background-size: 50%;
+	}
+}
+@-webkit-keyframes Fade {
+	0% {
+		opacity: 1;
+	}
+	
+	100% {
+		opacity: 0;
+	}
+}
+
 
 .zoom {
     position: fixed;
@@ -29,8 +77,10 @@ main {
 	transition: transform .3s ease-in-out;
 	width: 6500px;
 	height: 5000px;
-	transform: scale(1);
+	transform: scale(.6);
 	transform-origin: top left;
+	
+
 }
 main .video {
 	display: inline-block;
