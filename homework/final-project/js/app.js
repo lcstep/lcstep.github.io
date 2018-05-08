@@ -74,13 +74,13 @@ $(".video").click(function(e) {
 
 // sun
 
-$(document).mousemove(function(e){
-    $(".sun").css({
-      left:e.pageX - 1000, 
-      top:e.pageY - 1000
-    });
+// $(document).mousemove(function(e){
+//     $(".sun").css({
+//       left:e.pageX - 1000, 
+//       top:e.pageY - 1000
+//     });
 
-});
+// });
 
 
 

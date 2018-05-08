@@ -2,6 +2,15 @@
 	box-sizing: border-box;
 }
 
+:root{
+	--warm-yellow: rgba(233,160,22,1);
+	--bright-yellow: rgba(246,232,13,1);
+	--dark-blue: rgba(2,1,15,1);
+	--royal-blue: rgba(27,15,140,1);
+}
+
+
+
 body {
 	font-family: 'Arsenal', sans-serif;
 	/*width: 10000px;
@@ -15,6 +24,7 @@ body {
 h1 { 
 	font-weight: 100;  
 	font-size: 6vw;
+	
 }
 .intro {
 	
@@ -32,6 +42,51 @@ h1 {
   	
 }
 
+.intro svg {
+	width: 20%;
+}
+path {
+	
+	stroke: #fff;
+  stroke-dashoffset: -1500;
+  stroke-dasharray: 2000;
+  stroke-width: 1px;
+  fill: none;
+  -webkit-animation: draw 3s ease-in forwards 0.5s;
+          animation: draw 3s ease-in forwards 0.5s;
+}
+
+@-webkit-keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+ /*.st0{opacity:0.4;}
+    .st1{fill:#0C0B0B;}
+    .st2{fill:none;stroke:#0C0B0B;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+    .st3{fill:none;stroke:#0C0B0B;stroke-miterlimit:10;}
+    .st4{fill:none;stroke:#0C0B0B;stroke-width:6;stroke-miterlimit:10;}
+*/
+.intro button {
+	background: transparent;
+	border: 1px solid rgba(255,255,255,1);
+	padding: 10px 40px;
+	color: #fff;
+	margin-top: 100px;
+	z-index: 100;
+	opacity: .5;
+	transition: opacity .3s ease-in-out;
+}
+
+.intro button:hover {
+	opacity: 1;
+}
 .intro p {
 	font-size: 20px;
 }
