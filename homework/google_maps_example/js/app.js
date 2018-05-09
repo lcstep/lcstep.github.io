@@ -62,16 +62,6 @@
         });
        
          
-
-       
-$("button").click(function() {
-          marker2.setVisible(true);
-          marker3.setVisible(true);
-          marker4.setVisible(true); // maps API hide call
-        });
-      }
-
-
 $.ajax({
   type: 'GET',
   url: 'https://api.citybik.es/v2/networks/citi-bike-nyc',
@@ -86,13 +76,8 @@ $.ajax({
 
      function citiMarkers(station) {
         
-        var latitude = parseFloat(station.latitude);
-        console.log(latitude);
-        var longitude = parseFloat(station.longitude); 
-        console.log(longitude)
-
-        var markers = new google.maps.Marker({
-          position: {latitude, longitude},
+       new google.maps.Marker({
+          position: {lat: station.latitude, lng: station.longitude},
           map: map
         })
       }
@@ -101,4 +86,14 @@ $.ajax({
   
 }
 });
+       
+$("button").click(function() {
+          marker2.setVisible(true);
+          marker3.setVisible(true);
+          marker4.setVisible(true); // maps API hide call
+        });
+      }
+
+
+
 

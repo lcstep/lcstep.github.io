@@ -1,0 +1,72 @@
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+header {
+  background-color: yellow;
+  padding: 10px 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+header h1 {
+  font-size: 30px;
+}
+
+header nav {
+  margin-top: 6px;
+}
+
+header nav a {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+section {
+  background-color: black;
+  display: flex;
+}
+
+article {
+  background-color: white;
+  margin: 10px;
+  box-sizing: border-box;
+  padding: 2%;
+}
+
+/* first-child targets the 1st element */
+
+article:first-child {
+  margin-right: 0px;
+  border-right: none;
+}
+
+article h1 {
+  font-size: 20px;
+  text-align: center;
+  padding: 5px 0;
+}
+
+@media screen and (max-width: 600px) {
+  section {
+    flex-direction: column;
+  }
+  article {
+    flex: 1;
+  }
+
+  article:first-child {
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
