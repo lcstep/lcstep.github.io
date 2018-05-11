@@ -11,15 +11,29 @@
 }
 
 
-
+html {
+	
+}
 body {
 	font-family: 'Arsenal', sans-serif;
-	/*width: 10000px;
-	height: 10000px;*/
-	overflow-x: hidden;
-	/*position: absolute;*/
+	overflow:hidden;
+	position: absolute;
 	background: #02010F;
+
 	
+}
+
+main {
+	transition: transform .3s ease-in-out;
+	width: 6500px;
+	height: 5000px;
+	transform: scale(.6);
+	transform-origin: top left;
+	position: relative;
+}
+
+.draggable {
+	position: absolute;
 }
 
 h1 { 
@@ -180,126 +194,25 @@ path {
 	text-decoration: none;
 }
 
-main {
-	transition: transform .3s ease-in-out;
-	width: 6500px;
-	height: 5000px;
-	transform: scale(.6);
-	transform-origin: top left;
-	
 
-}
-main .video {
+.video {
 	display: inline-block;
 	position: absolute;
+
 }
 
 
-
-main .vertical {
-	/*width: 350px;*/
-}
-
-main .horizontal{
-/*	width: 50%;*/
-}
-
-.horizontal video, .vertical video {
-	/*transition: opacity .5s;
-	width: 100%;
-	height: auto;
-	object-fit: cover;*/
-}
 
 .caption {
 	text-align: center;
-	display: none;
-	transition: opacity .3s ease-in-out;
+	opacity: 0;
+	
 	color: #CBCBD1;
 	font-size: 20px;
-}
-
-.video.snowlake {
-	left: 450px;
-	top: 1500px;
-}
-
-.video.chimes1 {
-	left: 2100px;
-	top: 300px;
-}
-.video.fire {
-	left: 600px;
-	top: 500px;
-}
-.video.tune {
-	left: 2200px;
-	top: 1300px;
-	width: 1000px;
-}
-.video.milkweed {
-	left: 2400px;
-	top: 2200px;
-}
-.video.nh {
-	left: 3000px;
-	top: 400px;
+	height: 20px;
+	-webkit-transform: translateZ(0);
 	
 }
-.video.pines {
-	left: 1200px;
-	top: 1800px;
-}
-
-.video.fall {
-	left: 3600px;
-	top: 0px;
-}
-
-.video.blackbirds {
-	left: 800px;
-	top: 3400px;
-}
-.video.bus {
-	left: 3400px;
-	top: 3000px;
-}
-.video.cemetery {
-	left: 5000px;
-	top: 2200px;
-}
-.video.carmusic {
-	left: 5200px;
-	top: 1200px;
-}
-.video.dumbo {
-	left: 5300px;
-	top: 200px;
-}
-.video.myrtle {
-	left: 3900px;
-	top: 1000px;
-}
-.video.thunder {
-	left: 3600px;
-	top: 2000px;
-}
-
-.video.window1 {
-	left: 2200px;
-	top: 3800px;
-}
-.video.window2 {
-	left: 4800px;
-	top: 3200px;
-}
-.video.wyckoff {
-	left: 3000px;
-	top: 4000px;
-}
-
-
-
 
 
 
