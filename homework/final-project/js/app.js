@@ -1,11 +1,35 @@
 
+// CLOSE SPLASH 
 
 $(".intro").click(function(){
 	$(".intro").fadeOut("slow");
 	$("header").css("opacity", "1")
 })
 
-// // VIDEOS DON'T OPEN WHILE DRAGGING
+
+// SWITCH COLOR SCHEME
+
+$("#dark").addClass("active");
+$("#light").click(function(){
+	$("#dark").removeClass("active");
+	$("body").css("background", "#fff");
+	$("header").css("background", "rgba(255,255,255,.9)");
+	$("#light").addClass("active");
+});
+
+$("#dark").click(function(){
+	$("#light").removeClass("active");
+	$("body").css("background", "#02010F");
+	$("header").css("background", "rgba(10,10,10,.7)");
+	$("#dark").addClass("active");
+});
+
+
+// TOP LEFT 
+
+
+
+// VIDEOS DON'T OPEN WHILE DRAGGING
 
 $(".video").click(function(e) {
 	e.preventDefault();
@@ -54,7 +78,7 @@ $("#minus").click(zoomOut);
 function zoomIn () {
 	var current = parseFloat($('#video-wrapper').css('transform').split(',')[3]);
 	var zoom = current * 1.2;	
-	$("#video-wrapper").css({"transform": "scale(" + zoom + ")", "transform-origin": "center"});
+	$("#video-wrapper").css("transform", "scale(" + zoom + ")");
 	
 }
 
@@ -62,7 +86,7 @@ function zoomOut () {
 	var current = parseFloat($('#video-wrapper').css('transform').split(',')[3]);
 	var zoomOut = current * .8;
 	console.log(zoomOut);
-	$("#video-wrapper").css({"transform": "scale(" + zoomOut + ")", "transform-origin": "center"});
+	$("#video-wrapper").css("transform", "scale(" + zoomOut + ")");
 
 
 }

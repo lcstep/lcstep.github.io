@@ -8,13 +8,13 @@
 	<link href="css/spread.css" rel="stylesheet" type="text/css">
     <link href="css/video-positions.css" rel="stylesheet" type="text/css">
     <script src="https://code.jquery.com/jquery-2.2.4.js"></script> 
-    <script type="text/javascript">
-        $(window).bind(900, function() {  
+    <!-- <script type="text/javascript">
+        $(window).bind("900", function() {  
             
              $('.container').load('videos.html');
     
         });
-    </script>
+    </script> -->
 </head>
 <body>
 
@@ -61,15 +61,17 @@
         </div>
     <header>
         <div class="logo">
+           
             <svg>
                 <use xlink:href="#eye" transform="scale(0.2)" stroke-width="5px"> 
             </svg>
+           
         </div>
-        <div class="colorscheme">
-            <a href="#">Light</a>
-            <a href="#">Dark</a>
+        <div class="colorscheme toggles">
+            <a id="light">Light</a>
+            <a id="dark">Dark</a>
         </div>
-        <div class="zoom">
+        <div class="zoom toggles">
             <a id="plus" href="#">+</a>
             <a id="minus" href="#">-</a>
         </div>
@@ -77,6 +79,319 @@
     
 	<main class="container">
        
+        <div class="draggable">
+            <div id ="video-wrapper">
+
+        <div class="video vertical light" id="top">
+                <video>
+                    <source src="assets/final/solid-light-1.mp4" type="video/mp4">
+                </video>
+         <p class="caption test">solid light works</p>
+         
+     </div>
+     
+     <div class="video vertical snowlake"> 
+        
+            <video>
+                <source src="assets/final/snowlake-small.mp4" type="video/mp4">
+            </video>
+        
+        <p class="caption">snow lake, june 2017</p>
+     </div>
+     <div  class="video vertical chimes1">
+     
+            <video>
+                <source src="assets/final/chimes1-small.mp4" type="video/mp4">
+            </video>
+       
+         <p class="caption">LA, january 2018</p>
+    </div>
+    <div class="video vertical milkweed">
+        
+            <video>
+                <source src="assets/final/milkweed.mp4" type="video/mp4">
+            </video>
+       
+        <p class="caption">milkweed</p>
+   </div>
+   <div class="video horizontal tune">
+      
+            <video>
+                <source src="assets/final/tune-small.mp4" type="video/mp4">
+            </video>
+        
+        <p class="caption">family tunes</p>
+    </div>
+    <div class="video horizontal fire">
+       
+            <video>
+                <source src="assets/final/fire-small.mp4" type="video/mp4">
+            </video>
+       
+        <p class="caption">julianna's wedding bonfire</p>
+    </div>
+    <div class="video vertical nh">
+        
+            <video>
+                <source src="assets/final/nh-small.mp4" type="video/mp4">
+            </video>
+     
+        <p class="caption">new hampshire, august 2016</p>
+   </div>
+   <div class="video vertical pines">
+        
+            <video>
+                <source src="assets/final/pines.mp4" type="video/mp4">
+            </video>
+       
+        <p class="caption">reservoir walk, 2016</p>
+   </div>
+   <div class="video horizontal fall">
+       
+            <video>
+                <source src="assets/final/fall-small.mp4" type="video/mp4">
+            </video>
+       
+         <p class="caption">ridgewood, 2016</p>
+   </div>
+    <div class="video horizontal blackbirds">
+        
+            <video>
+                <source src="assets/final/blackbirds.mp4" type="video/mp4">
+            </video>
+       
+        <p class="caption">blackbird flock</p>
+   </div>
+   <div class="video horizontal bus">
+        
+            <video>
+                <source src="assets/final/bus.mp4" type="video/mp4">
+            </video>
+       
+        <p class="caption">seneca ave</p>
+   </div>
+   <div class="video horizontal cemetery">
+       
+            <video>
+                <source src="assets/final/cemetery.mp4" type="video/mp4">
+            </video>
+        
+        <p class="caption">walking around the cemetery</p>
+   </div>
+   <div class="video horizontal carmusic">
+        
+            <video>
+                <source src="assets/final/carmusic-sm.mp4" type="video/mp4">
+            </video>
+        
+        <p class="caption">🎶</p>
+   </div>
+    <div class="video horizontal dumbo">
+        
+            <video>
+                <source src="assets/final/dumbo.mp4" type="video/mp4">
+            </video>
+        
+         <p class="caption">dumbo</p>
+   </div>
+   <div class="video horizontal myrtle">
+            <video>
+                <source src="assets/final/myrtle.mp4" type="video/mp4">
+            </video>
+         <p class="caption">pigeons on myrtle avenue</p>
+   </div>
+   <div class="video horizontal thunder">
+            <video>
+                <source src="assets/final/thunder.mp4" type="video/mp4">
+            </video>
+         <p class="caption">thunder & lightning</p>
+   </div>
+   <div class="video horizontal window1">
+            <video>
+                <source src="assets/final/window1.mp4" type="video/mp4">
+            </video>
+
+         <p class="caption">my window</p>
+   </div>
+    <div class="video horizontal window2">
+     
+            <video>
+                <source src="assets/final/window2.mp4" type="video/mp4">
+            </video>
+       
+         <p class="caption">my window</p>
+   </div>
+    <div class="video horizontal wyckoff">
+      
+            <video>
+                <source src="assets/final/wyckoff.mp4" type="video/mp4">
+            </video>
+        
+         <p class="caption">wyckoff ave in the morning</p>
+   </div>
+   <div class="video vertical bees">
+      
+            <video loop>
+                <source src="assets/final/bees.mp4" type="video/mp4">
+            </video>
+        
+         <p class="caption">dinner</p>
+   </div>
+   <div class="video horizontal bridge">
+      
+            <video loop>
+                <source src="assets/final/bridge.mp4" type="video/mp4">
+            </video>
+        
+         <p class="caption">manhattan bridge, september 2016</p>
+   </div>
+   <div class="video horizontal chimes2">
+      
+            <video loop>
+                <source src="assets/final/chimes2.mp4" type="video/mp4">
+            </video>
+        
+         <p class="caption">grandma's house</p>
+   </div>
+   <div class="video horizontal firecracker">
+      
+            <video loop>
+                <source src="assets/final/firecracker.mp4" type="video/mp4">
+            </video>
+        
+         <p class="caption">ross & corinne's wedding</p>
+   </div>
+   <div class="video horizontal fish">
+      
+            <video loop>
+                <source src="assets/final/fish.mp4" type="video/mp4">
+            </video>
+        
+         <p class="caption">botanical gardens, january 2018</p>
+
+   </div>
+   <div class="video horizontal fly">
+      
+            <video loop muted>
+                <source src="assets/final/fly.mp4" type="video/mp4">
+            </video>
+        
+         <p class="caption">fear of flying, 2017</p>
+   </div>
+    <div class="video horizontal hudson">
+      
+            <video loop>
+                <source src="assets/final/hudson.mp4" type="video/mp4">
+            </video>
+        
+         <p class="caption">hudson, september 2016</p>
+   </div>
+   <div class="video horizontal katydid">
+      
+            <video loop>
+                <source src="assets/final/katydid.mp4" type="video/mp4">
+            </video>
+        
+         <p class="caption">katydids & peepers (volume up)</p>
+   </div>
+   <div class="video horizontal knickerbocker">
+      
+            <video loop>
+                <source src="assets/final/knickerbocker.mp4" type="video/mp4">
+            </video>
+        
+         <p class="caption">M train, june 2016</p>
+   </div>
+    <div class="video horizontal laundry">
+      
+            <video loop>
+                <source src="assets/final/laundry.mp4" type="video/mp4">
+            </video>
+        
+         <p class="caption">home</p>
+   </div>
+    <div class="video horizontal marching">
+      
+            <video loop>
+                <source src="assets/final/marching.mp4" type="video/mp4">
+            </video>
+        
+         <p class="caption">hungry marching band</p>
+   </div>
+    <div class="video horizontal pool">
+      
+            <video loop>
+                <source src="assets/final/pool.mp4" type="video/mp4">
+            </video>
+        
+         <p class="caption">grandma's house</p>
+   </div>
+   <div class="video horizontal rowe">
+      
+            <video loop>
+                <source src="assets/final/rowe.mp4" type="video/mp4">
+            </video>
+        
+         <p class="caption">rowe, thanksgiving 2015</p>
+   </div>
+   <div class="video horizontal sand">
+      
+            <video loop>
+                <source src="assets/final/sand.mp4" type="video/mp4">
+            </video>
+        
+         <p class="caption">black sand beach</p>
+   </div>
+    <div class="video horizontal sand">
+      
+            <video loop>
+                <source src="assets/final/sand.mp4" type="video/mp4">
+            </video>
+        
+         <p class="caption">black sand beach</p>
+   </div>
+    <div class="video horizontal vt">
+      
+            <video loop>
+                <source src="assets/final/vermont.mp4" type="video/mp4">
+            </video>
+        
+         <p class="caption">vermont, afternoon</p>
+   </div>
+   <div class="video horizontal vt2">
+      
+            <video loop>
+                <source src="assets/final/vt-evening.mp4" type="video/mp4">
+            </video>
+        
+         <p class="caption">vermont, evening</p>
+   </div>
+   <div class="video horizontal wayland">
+      
+            <video loop>
+                <source src="assets/final/wayland.mp4" type="video/mp4">
+            </video>
+        
+         <p class="caption">top of the world, wayland</p>
+   </div>
+   <div class="video horizontal willow">
+      
+            <video loop>
+                <source src="assets/final/willow.mp4" type="video/mp4">
+            </video>
+        
+         <p class="caption">alphabet city, 2016</p>
+   </div>
+   <div class="video horizontal window3">
+      
+            <video loop>
+                <source src="assets/final/window3.mp4" type="video/mp4">
+            </video>
+        
+         <p class="caption">grove street, 2016</p>
+   </div>
+</div>
+</div>
     </main>
 
 
@@ -85,7 +400,8 @@
      	
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.1/dat.gui.min.js"></script> 
-<script type="text/javascript" src="js/momentum.min.js"></script>  
+<script type="text/javascript" src="js/momentum.min.js"></script> 
+<script type="text/javascript" src="js/app.js"></script> 
 
 </body>
 </html>
