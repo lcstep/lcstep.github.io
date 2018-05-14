@@ -1,4 +1,7 @@
-
+.video.light {
+	left: 0px;
+	top: 0px;
+}
 .video.snowlake {
 	left: 450px;
 	top: 1500px;
@@ -41,8 +44,8 @@
 	top: 3400px;
 }
 .video.bus {
-	left: 3400px;
-	top: 3000px;
+	left: 3600px;
+	top: 2000px;
 }
 .video.cemetery {
 	left: 5000px;
@@ -61,8 +64,8 @@
 	top: 1000px;
 }
 .video.thunder {
-	left: 3600px;
-	top: 2000px;
+	left: 3400px;
+	top: 3000px;
 }
 
 .video.window1 {
@@ -77,4 +80,92 @@
 	left: 3000px;
 	top: 4000px;
 }
+.video.bees {
+	left: 500px;
+	top: 4200px;
+}
+.video.window3 {
+	left: 6500px;
+	top: 1500px;
+}
+.video.willow {
+	left: 5700px;
+	top: 2300px;
+}
+.video.wayland {
+	left: 1300px;
+	top: 4600px;
+}
+
+.video.vt {
+	left: 0px;
+	top: 5500px;
+}
+.video.vt2 {
+	left: 960px;
+	top: 5500px;
+}
+.video.knickerbocker {
+	left: 6000px;
+	top: 3400px;
+}
+
+.video.chimes2 {
+	left: 4500px;
+	top: 4300px;
+}
+
+.video.laundry {
+	left: 2700px;
+	top: 5000px;
+}
+
+.video.pool {
+	left: 6900px;
+	top: 600px;
+}
+
+.video.sand {
+	left: 6900px;
+	top: 2500px;
+}
+.video.rowe {
+	left: 2300px;
+	top: 5800px;
+}
+.video.marching {
+	left: 5300px;
+	top: 4500px;
+}
+.video.katydid {
+	left: 3900px;
+	top: 5100px;
+}
+
+.video.hudson {
+	left: 3600px;
+	top: 6000px;
+}
+
+.video.fly {
+	left: 200px;
+	top: 2500px;
+}
+
+.video.fish {
+	left: 5300px;
+	top: 5500px;
+}
+
+.video.firecracker {
+	left: 600px;
+	top: 6300px;
+}
+
+.video.bridge {
+	left: 6800px;
+	top: 3500px;
+}
+
+
 
