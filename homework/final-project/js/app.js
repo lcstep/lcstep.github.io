@@ -1,7 +1,7 @@
 setTimeout(function(){
 	$("video").load().fadeIn("slow");
 
-},2000);  
+},2400);  
 
 
 // CLOSE SPLASH 
@@ -11,7 +11,7 @@ $(".intro").click(function(){
 	$(".intro").fadeOut("slow");
 	$("header").css("opacity", "1");
 
-})
+});
 
 
 
@@ -65,13 +65,13 @@ $(".video").mouseenter(hoverVideo);
 $(".video").mouseleave(hideVideo);
 
 function hoverVideo(e) {  
-     // $(event.currentTarget).find(".caption").show();
+     $(event.currentTarget).find(".caption").show();
      $('video', this).get(0).play(); 
 
  }
 
  function hideVideo(e) {
-	// $(event.currentTarget).find(".caption").hide();
+	$(event.currentTarget).find(".caption").hide();
 	$('video', this).get(0).pause(); 
 
 }
