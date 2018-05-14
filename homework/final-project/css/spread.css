@@ -128,8 +128,8 @@ path {
 	stroke-width: 1px;
 	fill: #43548A;
 	fill-opacity: 0;
-	-webkit-animation: draw 3s forwards ;
-	animation: draw 3s forwards, FillIn 1s 3s ease-in forwards;
+	-webkit-animation: draw 2s forwards ;
+	animation: draw 2s forwards, FillIn 1s 2s ease-in forwards;
 	}
 
 	#pupil {
