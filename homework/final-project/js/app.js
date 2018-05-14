@@ -64,13 +64,13 @@ var draggable = new momentum.Draggable(element, {
 $(".video").mouseenter(hoverVideo);
 $(".video").mouseleave(hideVideo);
 
-function hoverVideo(e) {  
+function hoverVideo(event) {  
      $(event.currentTarget).find(".caption").show();
      $('video', this).get(0).play(); 
 
  }
 
- function hideVideo(e) {
+ function hideVideo(event) {
 	$(event.currentTarget).find(".caption").hide();
 	$('video', this).get(0).pause(); 
 
