@@ -1,10 +1,18 @@
+setTimeout(function(){
+	$("video").load().fadeIn("slow");
+
+},2000);  
+
 
 // CLOSE SPLASH 
 
 $(".intro").click(function(){
+
 	$(".intro").fadeOut("slow");
-	$("header").css("opacity", "1")
+	$("header").css("opacity", "1");
+
 })
+
 
 
 // SWITCH COLOR SCHEME

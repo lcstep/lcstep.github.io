@@ -294,11 +294,14 @@ path {
 
 
 
-
+video {
+	display: none;
+}
 
 .video {
 	display: inline-block;
 	position: absolute;
+	
 	}
 
 
