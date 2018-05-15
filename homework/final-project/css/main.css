@@ -2,58 +2,342 @@
 	box-sizing: border-box;
 }
 
+:root{
+	--warm-yellow: rgba(233,160,22,1);
+	--bright-yellow: rgba(246,232,13,1);
+	--dark-blue: rgba(2,1,15,1);
+	--royal-blue: rgba(27,15,140,1);
+	--blue-gradient: linear-gradient(rgba(2,1,15,.98) 0%,  rgba(27,15,140,.95) 100%);
+}
+
+
+html {
+	
+}
+
 body {
-	font-family: 'Arsenal', sans-serif;;
-}
+	font-family: 'Arsenal', sans-serif;
+	overflow:hidden;
+	position: absolute;
+	background: #02010F;
+	width: 6500px;
+	height: 6000px;
+	transition: background .8s ease-in-out;
+	
+	}
 
-main {
+
+/*---HEADER---*/
+
+
+header {
+	width: 100vw;
+	position: absolute;
 	display: flex;
-	flex-wrap: wrap;
+	background: rgba(10,10,10,.7);
+	z-index: 100;
+	height: 70px;
+	opacity: 0;
+	transition: opacity .3s ease-in-out, background .8s ease-in-out;
+	padding: 10px 20px;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.logo {
+	height: 50px;
+	width: 100px;
+	margin-right: auto;
 }
 
 
-main .vertical {
-	flex: 25%;
+.logo svg path {
+	stroke-width: 5px;
+	stroke: #fff;
+	fill: #fff;
 }
 
-main .horizontal{
-	flex: 50%;
-}
+.toggles {
+	display: flex;
+    border: 1px solid #43548A;
+    border-radius: 4px;
+    height: 40px;
+    font-size: 14px;
+   
+    
+	}
 
-.horizontal video, .vertical video {
-	transition: opacity .5s;
+	.colorscheme {
+		margin-right: 20px;
+	}
+
+	.toggles a {
+		color: #8699D4;
+		text-decoration: none;
+		transition: background .8s ease-in-out, color .8s ease-in-out;
+		padding: 10px 20px;
+		cursor: pointer;
+	}
+
+	.toggles a:hover, .toggles a.active {
+		background: #43548A;
+		color: #fff;
+
+	}
+
+	.zoom {
+		font-size: 30px;
+    	line-height: .5;
+		
+	}
+
+    
+
+/*---DRAGGABLE & MOMENTUM SETUP---*/
+
+.container {
+	position: relative;
+	overflow: hidden;
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
-}
-
-.fancybox-content {
+	left: 0;
+	top: 0;
 	
-	/*height: 100%;
-	width: auto;*/
-}
+	
+	}
 
-.fancybox-slide {
-	padding: 0px;
-}
+	.draggable {
+		position: absolute;
+		width: 200%;
+		height: 200%;
+		cursor: grab;
+		cursor: -webkit-grab;
+		left: 0;
+		top:0;
+
+		}
+
+		#video-wrapper {
+			transition: transform .3s ease-in-out;
+			transform-origin: center left;
+			transform: scale(.6) ;
+			margin-top: 70px;
+			
+			}
+
+
+/*---SPLASH SCREEN---*/
 
 
 
-.featherlight:last-of-type {
-	background: rgba(255,255,255,.95);
-}
-
-.featherlight video {
-	height: 100vh;
-}
-
-.featherlight .featherlight-inner {
+.intro {
+	width: 100%;
+	background: rgba(18,13,68,.95);
+	/*background: var(--blue-gradient);*/
+	height: 100%;
+	position: fixed;
 	display: flex;
-	justify-content: flex-start;
-	align-items: flex-end;
-	color: #000;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	z-index: 2;
+	color: #fff;
+	border: 20px solid rgba(150,150,250,.2)
+	}
+	.intro .text {
+		margin-top: 2rem;
+		max-width: 90%;
+		text-align: center;
+		}
+
+		.intro h1 {
+			font-weight: 400;
+			font-size: 4vw;
+		}
+	.intro p {
+    	font-size: 2vw;
+    	font-style: italic;
+    	padding: 40px;
+    	
+    	}
+
+   .intro button {
+		background: transparent;
+		border: 1px solid rgba(255,255,255,1);
+		padding: 10px 40px;
+		color: #fff;
+		z-index: 100;
+		opacity: .5;
+		transition: opacity .3s ease-in-out;
+	    }
+
+	    .intro button:hover {
+	    	opacity: 1;
+	    	}
+    
+
+/* eye svg */
+
+.intro svg {
+	width: 200px;
+	min-width: 80px;
+	min-height: 80px;
+	/*margin: 40px;*/
 }
 
-.featherlight p {
-	padding: 4em;
+#lash1 {
+		transform: translateY(50px);
+	}
+path {
+	stroke: #43548A;
+	stroke-dashoffset: -1500;
+	stroke-dasharray: 2000;
+	stroke-width: 1px;
+	fill: #43548A;
+	fill-opacity: 0;
+	-webkit-animation: draw 2s forwards ;
+	animation: draw 2s forwards, FillIn 1s 2s ease-in forwards;
+	}
+
+	#pupil {
+		stroke: #12F6FF;
+		fill: #12F6FF;
+
+	}
+
+	
+
+	@-webkit-keyframes draw {
+		to {
+
+			stroke-dashoffset: 0;
+		}
+	}
+	@keyframes draw {
+		to {
+			stroke-dashoffset: 0;
+		}
+	}
+	@keyframes FillIn {
+	  from { fill-opacity: 0; }
+	  to { fill-opacity: 1; }
+}	
+
+ 
+
+ /* sun */
+
+
+    .sun:after {
+    	background: -moz-radial-gradient(center, ellipse cover, rgba(224,134,23,1) 0%, rgba(224,134,23,0) 50%);
+    	background: -webkit-radial-gradient (circle, rgba(224,134,23,1) 0%, rgba(224,134,23,0) 50%);;
+    	background: radial-gradient(circle, rgba(224,134,23,1) 0%, rgba(224,134,23,0) 50%);
+    	background-repeat: no-repeat;
+    	background-position: center;
+    	content: '';
+    	position: absolute;
+    	height: 170%;
+    	width: 100%;
+    	left: 0;
+    	right: 0;
+    	bottom: -75%;
+    	-moz-animation: Gradient 10s ease-in-out infinite ;
+    	-webkit-animation: Gradient 10s ease-in-out infinite;
+    	animation: Gradient 10s ease-in-out infinite;
+    	
+    	
+    }
+    .sun {
+    	position: absolute;
+    	overflow: hidden;
+    	background-size: 0;
+    	z-index: 100;
+    	width: 200%;
+    	height: 200%;
+    	align-self: center;	
+    }
+
+    @-webkit-keyframes Gradient {
+    	0% {
+    		background-size: 40%;
+    	}
+    	50% {
+    		background-size: 100%;
+    	}
+    	100% {
+    		background-size: 40%;
+    	}
+    }
+
+    @-moz-keyframes Gradient {
+    	0% {
+    		background-size: 40%;
+    	}
+    	50% {
+    		background-size: 100%;
+    	}
+    	100% {
+    		background-size: 40%;
+    	}
+    }
+
+    @keyframes Gradient {
+    	0% {
+    		background-size: 40%;
+    	}
+    	50% {
+    		background-size: 100%;
+    	}
+    	100% {
+    		background-size: 40%;
+    	}
+    }
+
+
+/*---GRID CANVAS---*/
+
+
+
+video {
+	display: none;
 }
+
+.video {
+	display: inline-block;
+	position: absolute;
+	
+	}
+
+
+
+.caption {
+	display: none;
+	text-align: center;
+	/*position: absolute;*/
+	color: #CBCBD1;
+	font-size: 20px;
+	height: 20px;
+	-webkit-transform: translateZ(0);
+
+	}
+
+
+/*
+    .featherlight:last-of-type {
+    	background: rgba(255,255,255,.95);
+    }
+
+    .featherlight video {
+    	height: 100vh;
+    }
+
+    .featherlight .featherlight-inner {
+    	display: flex;
+    	justify-content: flex-start;
+    	align-items: flex-end;
+    	color: #000;
+    }
+
+    .featherlight p {
+    	padding: 4em;
+    }*/
