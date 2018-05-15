@@ -6,10 +6,11 @@
 	--warm-yellow: rgba(233,160,22,1);
 	--bright-yellow: rgba(246,232,13,1);
 	--dark-blue: rgba(2,1,15,1);
-	--royal-blue: rgba(27,15,140,1);
+	--royal-blue: #3B39F4;
 	--blue-gradient: linear-gradient(rgba(2,1,15,.98) 0%,  rgba(27,15,140,.95) 100%);
 }
 
+button:focus {border: 0;}
 
 html {
 	
@@ -59,7 +60,7 @@ header {
 
 .toggles {
 	display: flex;
-    border: 1px solid #43548A;
+    border: 1px solid var(--royal-blue);
     border-radius: 4px;
     height: 40px;
     font-size: 14px;
@@ -72,7 +73,7 @@ header {
 	}
 
 	.toggles a {
-		color: #8699D4;
+		color: var(--royal-blue);
 		text-decoration: none;
 		transition: background .8s ease-in-out, color .8s ease-in-out;
 		padding: 10px 20px;
@@ -80,7 +81,7 @@ header {
 	}
 
 	.toggles a:hover, .toggles a.active {
-		background: #43548A;
+		background: var(--royal-blue);
 		color: #fff;
 
 	}
@@ -131,10 +132,11 @@ header {
 
 
 .intro {
-	width: 100%;
-	background: rgba(18,13,68,.95);
-	/*background: var(--blue-gradient);*/
-	height: 100%;
+	width: 100vw;
+	border: 15px solid rgba(150,150,250,.2);
+	 background: linear-gradient(270deg, rgba(11,9,75,.95), rgba(11,68,163,.95));
+	background-size: 500% 500%;
+	height: 100vh;
 	position: fixed;
 	display: flex;
 	flex-direction: column;
@@ -142,7 +144,10 @@ header {
 	justify-content: center;
 	z-index: 2;
 	color: #fff;
-	border: 20px solid rgba(150,150,250,.2)
+	
+	-webkit-animation: background 10s ease infinite;
+	-moz-animation: background 10s ease infinite;
+	  animation: background 10s ease infinite;
 	}
 	.intro .text {
 		margin-top: 2rem;
@@ -152,10 +157,10 @@ header {
 
 		.intro h1 {
 			font-weight: 400;
-			font-size: 4vw;
+			font-size: 3.5vw;
 		}
 	.intro p {
-    	font-size: 2vw;
+    	font-size: 1.5vw;
     	font-style: italic;
     	padding: 40px;
     	
@@ -175,7 +180,15 @@ header {
 	    	opacity: 1;
 	    	}
     
-
+.sun {
+	 background: radial-gradient(circle, rgba(27,15,200,.4) 00%, rgba(27,15,200,0) 50%);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 140vw;
+  height: 140vh;
+  position: absolute;
+}
 /* eye svg */
 
 .intro svg {
@@ -189,11 +202,11 @@ header {
 		transform: translateY(50px);
 	}
 path {
-	stroke: #43548A;
+	stroke: #3B39F4;
 	stroke-dashoffset: -1500;
 	stroke-dasharray: 2000;
 	stroke-width: 1px;
-	fill: #43548A;
+	fill: #3B39F4;
 	fill-opacity: 0;
 	-webkit-animation: draw 2s forwards ;
 	animation: draw 2s forwards, FillIn 1s 2s ease-in forwards;
@@ -225,74 +238,6 @@ path {
 
  
 
- /* sun */
-
-
-    .sun:after {
-    	background: -moz-radial-gradient(center, ellipse cover, rgba(224,134,23,1) 0%, rgba(224,134,23,0) 50%);
-    	background: -webkit-radial-gradient (circle, rgba(224,134,23,1) 0%, rgba(224,134,23,0) 50%);;
-    	background: radial-gradient(circle, rgba(224,134,23,1) 0%, rgba(224,134,23,0) 50%);
-    	background-repeat: no-repeat;
-    	background-position: center;
-    	content: '';
-    	position: absolute;
-    	height: 170%;
-    	width: 100%;
-    	left: 0;
-    	right: 0;
-    	bottom: -75%;
-    	-moz-animation: Gradient 10s ease-in-out infinite ;
-    	-webkit-animation: Gradient 10s ease-in-out infinite;
-    	animation: Gradient 10s ease-in-out infinite;
-    	
-    	
-    }
-    .sun {
-    	position: absolute;
-    	overflow: hidden;
-    	background-size: 0;
-    	z-index: 100;
-    	width: 200%;
-    	height: 200%;
-    	align-self: center;	
-    }
-
-    @-webkit-keyframes Gradient {
-    	0% {
-    		background-size: 40%;
-    	}
-    	50% {
-    		background-size: 100%;
-    	}
-    	100% {
-    		background-size: 40%;
-    	}
-    }
-
-    @-moz-keyframes Gradient {
-    	0% {
-    		background-size: 40%;
-    	}
-    	50% {
-    		background-size: 100%;
-    	}
-    	100% {
-    		background-size: 40%;
-    	}
-    }
-
-    @keyframes Gradient {
-    	0% {
-    		background-size: 40%;
-    	}
-    	50% {
-    		background-size: 100%;
-    	}
-    	100% {
-    		background-size: 40%;
-    	}
-    }
-
 
 /*---GRID CANVAS---*/
 
@@ -320,6 +265,28 @@ video {
 	-webkit-transform: translateZ(0);
 
 	}
+
+
+
+   
+    @-webkit-keyframes background {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes background {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes background { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+}
+
+
 
 
 /*

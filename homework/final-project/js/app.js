@@ -3,7 +3,14 @@ setTimeout(function(){
 
 },2400);  
 
-
+$(document).mousemove(function(e){
+  var width = $(".sun").width();
+  var height = $(".sun").height();
+    $(".sun").css({
+      left:e.pageX - width/2, 
+      top:e.pageY - height/2
+    });
+});
 // CLOSE SPLASH 
 
 $(".intro").click(function(){
