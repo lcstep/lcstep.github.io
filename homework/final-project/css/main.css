@@ -134,7 +134,7 @@ header {
 .intro {
 	width: 100vw;
 	border: 15px solid rgba(150,150,250,.2);
-	 background: linear-gradient(270deg, rgba(11,9,75,.95), rgba(11,68,163,.95));
+	 background: linear-gradient(270deg, rgba(11,50,133,.95), rgba(11,9,75,.95));
 	background-size: 500% 500%;
 	height: 100vh;
 	position: fixed;
@@ -144,6 +144,7 @@ header {
 	justify-content: center;
 	z-index: 2;
 	color: #fff;
+	overflow: hidden;
 	
 	-webkit-animation: background 10s ease infinite;
 	-moz-animation: background 10s ease infinite;
@@ -269,7 +270,7 @@ video {
 
 
    
-    @-webkit-keyframes background {
+@-webkit-keyframes background {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
@@ -284,7 +285,7 @@ video {
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
 }
-}
+
 
 
 

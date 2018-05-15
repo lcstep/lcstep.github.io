@@ -1,0 +1,71 @@
+
+ /* sun */
+
+
+    .sun:after {
+    	background: -moz-radial-gradient(center, ellipse cover, rgba(224,134,23,1) 0%, rgba(224,134,23,0) 50%);
+    	background: -webkit-radial-gradient (circle, rgba(224,134,23,1) 0%, rgba(224,134,23,0) 50%);;
+    	background: radial-gradient(circle, rgba(224,134,23,1) 0%, rgba(224,134,23,0) 50%);
+    	background-repeat: no-repeat;
+    	background-position: center;
+    	content: '';
+    	position: absolute;
+    	height: 170%;
+    	width: 100%;
+    	left: 0;
+    	right: 0;
+    	bottom: -75%;
+    	-moz-animation: Gradient 10s ease-in-out infinite ;
+    	-webkit-animation: Gradient 10s ease-in-out infinite;
+    	animation: Gradient 10s ease-in-out infinite;
+    	
+    	
+    }
+    .sun {
+    	position: absolute;
+    	overflow: hidden;
+    	background-size: 0;
+    	z-index: 100;
+    	width: 200%;
+    	height: 200%;
+    	align-self: center;	
+    }
+
+
+     @-webkit-keyframes Gradient {
+        0% {
+            background-size: 40%;
+        }
+        50% {
+            background-size: 100%;
+        }
+        100% {
+            background-size: 40%;
+            opacity: 0;
+        }
+    }
+
+    @-moz-keyframes Gradient {
+        0% {
+            background-size: 40%;
+        }
+        50% {
+            background-size: 100%;
+        }
+        100% {
+            background-size: 40%;
+        }
+    }
+
+    @keyframes Gradient {
+        0% {
+            background-size: 40%;
+        }
+        50% {
+            background-size: 100%;
+        }
+        100% {
+            background-size: 40%;
+
+        }
+    }
