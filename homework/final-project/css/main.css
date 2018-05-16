@@ -8,6 +8,7 @@
 	--dark-blue: rgba(2,1,15,1);
 	--royal-blue: #3B39F4;
 	--blue-gradient: linear-gradient(rgba(2,1,15,.98) 0%,  rgba(27,15,140,.95) 100%);
+	--teal: #12F6FF;
 }
 
 button:focus { outline: 0; }
@@ -92,7 +93,25 @@ header {
 		
 	}
 
-    
+    header .about {
+    	position: static;
+    	color: var(--royal-blue);
+    	opacity: 1;
+    	margin-right: 20px;
+    }
+
+    header .about a {
+    	color: var(--royal-blue);
+    	transition: color .3s ease-in-out, background .3s ease-in-out;
+    	
+    	background-size: 0%;
+    }
+
+    header .about a:hover {
+    	color: #fff;
+    	background: var(--royal-blue);
+    	background-size: 100%;
+    }
 
 /*---DRAGGABLE & MOMENTUM SETUP---*/
 
@@ -191,6 +210,25 @@ header {
   height: 140vh;
   position: absolute;
 }
+
+
+
+.about {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	font-size: 13px;
+	opacity: .6;
+	transition: opacity .5s ease-in-out;
+	}
+
+	.about a {
+		color: var(--teal);
+		text-decoration: none;
+	}
+	.about:hover {
+		opacity: 1;
+	}
 /* eye svg */
 
 .intro svg {
@@ -200,9 +238,7 @@ header {
 	/*margin: 40px;*/
 }
 
-#lash1 {
-		transform: translateY(50px);
-	}
+
 path {
 	stroke: #3B39F4;
 	stroke-dashoffset: -1500;
