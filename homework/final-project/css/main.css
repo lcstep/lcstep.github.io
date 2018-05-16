@@ -10,7 +10,7 @@
 	--blue-gradient: linear-gradient(rgba(2,1,15,.98) 0%,  rgba(27,15,140,.95) 100%);
 }
 
-button:focus {border: 0;}
+button:focus { outline: 0; }
 
 html {
 	
@@ -134,7 +134,7 @@ header {
 .intro {
 	width: 100vw;
 	box-shadow: inset 0 0 0 15px rgba(150,150,250,0.2);
-	 background: linear-gradient(270deg, rgba(11,50,133,.95), rgba(11,9,75,0.95));
+	 background: linear-gradient(270deg, rgba(17,14,134,.95), rgba(6,4,54,0.95));
 	background-size: 500% 500%;
 	height: 100vh;
 	position: fixed;
@@ -169,16 +169,17 @@ header {
 
    .intro button {
 		background: transparent;
-		border: 1px solid rgba(255,255,255,1);
+		border: 1px solid var(--royal-blue);
 		padding: 10px 40px;
-		color: #fff;
+		color: var(--royal-blue);
 		z-index: 100;
-		opacity: .5;
-		transition: opacity .3s ease-in-out;
+		/*opacity: .5;*/
+		transition: color .3s ease-in-out, border-color .3s ease-in-out;
 	    }
 
 	    .intro button:hover {
-	    	opacity: 1;
+	    	color: #fff;
+	    	border-color: #fff;
 	    	}
     
 .sun {
