@@ -48,7 +48,8 @@ header {
 
 .logo {
 	height: 50px;
-	width: 100px;
+	/*width: 100px;*/
+
 	margin-right: auto;
 }
 
@@ -93,25 +94,25 @@ header {
 		
 	}
 
-    header .about {
+    header .info {
     	position: static;
     	color: var(--royal-blue);
     	opacity: 1;
     	margin-right: 20px;
     }
 
-    header .about a {
+    /*header .about a {
     	color: var(--royal-blue);
     	transition: color .3s ease-in-out, background .3s ease-in-out;
     	
     	background-size: 0%;
-    }
+    }*/
 
-    header .about a:hover {
+    /*header .about a:hover {
     	color: #fff;
     	background: var(--royal-blue);
     	background-size: 100%;
-    }
+    }*/
 
 /*---DRAGGABLE & MOMENTUM SETUP---*/
 
@@ -229,6 +230,20 @@ header {
 	.about:hover {
 		opacity: 1;
 	}
+
+.container .about {
+	position: fixed;
+}
+.container .about, .container .about a {
+	transition: color .3s ease-in-out, opacity .3s ease-in-out;
+	color: #A7A6C1;
+}
+
+.container .about:hover a {
+	color: var(--teal);
+}
+
+
 /* eye svg */
 
 .intro svg {
