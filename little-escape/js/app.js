@@ -1,7 +1,11 @@
+// LOAD THE VIDEOS
+
 setTimeout(function(){
 	$("video").load().fadeIn("slow");
 
 },2400);  
+
+// MOVE BRIGHT SPOT ON SPLASH PAGE 
 
 $(document).mousemove(function(e){
   var width = $(".sun").width();
@@ -40,9 +44,6 @@ $("#dark").click(function(){
 });
 
 
-// TOP LEFT 
-
-
 
 // VIDEOS DON'T OPEN WHILE DRAGGING
 
@@ -68,8 +69,10 @@ var draggable = new momentum.Draggable(element, {
 
 // // HOVER TO PLAY VIDEO and show captions
 
-$(".video").mouseenter(hoverVideo);
-$(".video").mouseleave(hideVideo);
+// $(".video").mouseenter(hoverVideo);
+// $(".video").mouseleave(hideVideo);
+
+$(".video").hover(hoverVideo, hideVideo);
 
 function hoverVideo(event) {  
      $(event.currentTarget).find(".caption").show();
