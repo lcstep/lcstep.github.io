@@ -247,7 +247,7 @@ header {
 /* eye svg */
 
 .intro svg {
-	width: 200px;
+	width: 300px;
 	min-width: 80px;
 	min-height: 80px;
 	/*margin: 40px;*/
@@ -261,7 +261,8 @@ path {
 	stroke-width: 1px;
 	fill: #3B39F4;
 	fill-opacity: 0;
-	-webkit-animation: draw 2s forwards ;
+	-webkit-animation: draw 2s forwards, FillIn 1s 2s ease-in forwards ;
+	-moz-animation: draw 2s forwards, FillIn 1s 2s ease-in forwards ;
 	animation: draw 2s forwards, FillIn 1s 2s ease-in forwards;
 	}
 
@@ -279,15 +280,30 @@ path {
 			stroke-dashoffset: 0;
 		}
 	}
+	@-moz-keyframes draw {
+		to {
+			stroke-dashoffset: 0;
+		}
+	}
 	@keyframes draw {
 		to {
 			stroke-dashoffset: 0;
 		}
 	}
+	@-webkit-keyframes FillIn {
+	  from { fill-opacity: 0; }
+	  to { fill-opacity: 1; }
+	}	
+
+	@-moz-keyframes FillIn {
+	  from { fill-opacity: 0; }
+	  to { fill-opacity: 1; }
+	}	
+
 	@keyframes FillIn {
 	  from { fill-opacity: 0; }
 	  to { fill-opacity: 1; }
-}	
+	}	
 
  
 
