@@ -1,0 +1,30 @@
+* { box-sizing: border-box; }
+
+body {
+	font-size: 20px;
+	margin: 0;
+	padding: 0;
+}
+
+main {
+	width: 90%;
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+.row {
+	
+}
+
+.box {
+	margin: .5rem 0;
+	background: #00f;
+	padding: .5rem;
+	text-align: center;
+	border-radius: 4px;
+	color: #fff;
+}
+
+.responsive {
+	background: hotpink;
+}
