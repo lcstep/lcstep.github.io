@@ -1,30 +1,179 @@
 * { box-sizing: border-box; }
 
-body {
+html {
 	font-size: 20px;
+}
+
+:root{ 
+	--dark-gray: #444649; 
+	--light-gray: #8F9092;
+}
+
+body {
+	font-size: 1rem;
+	line-height: 1.6;
 	margin: 0;
 	padding: 0;
-}
+	font-family: 'Source Sans Pro', sans-serif;
+	text-align: left;
+	color: var(--dark-gray);
+	}
+
 
 main {
 	width: 90%;
-	max-width: 1400px;
+	max-width: 960px;
 	margin: 0 auto;
-}
+	}
 
-.row {
+
+/*--HERO--*/
+
+.hero {
+	background: url("../images/monkey.jpg") no-repeat top left;
+	background-size: cover;
+	width: 100%;
+	height: 60vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 2rem;
+	}	
+
+	.hero:before {
+	content: '';
+	position: absolute;
+	background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
+	width: 100%;
+	height: 60vh;
+	}
+
+	.hero .row {
+		max-width: 960px;
+		width: 90%;
+	}
+
+
+
 	
-}
+
+/*--TEXT--*/
+
+h1 {
+		font-size: 2rem;
+		line-height: 1.4;
+		color: #fff;
+		position: relative;
+	}
+
+	@media screen and (min-width: 960px) {
+		h1 {
+			font-size: 3rem;
+		}
+	}
+
+h3 {
+	font-size: .9rem;
+	}
+
+
+p.intro {
+	font-weight: bold;
+	font-size: 1.2rem;
+	}
+
+
+
+/*--containers--*/
+
 
 .box {
 	margin: .5rem 0;
-	background: #00f;
-	padding: .5rem;
-	text-align: center;
-	border-radius: 4px;
-	color: #fff;
+	text-align: left;
+	}
+
+.image {
+	padding-bottom: 100%;
+	max-height: 580px;
+	width: 100%;
+	}
+
+.little {
+	padding-bottom: 49%;
+	}
+
+.fullwidth {
+	padding-bottom: 50%;
+	}
+
+.card {
+	box-shadow: 0 0 20px rgba(0,0,0,.1);
+	color: var(--light-gray);
+	}
+
+	.card p {
+		font-size: .8rem;
+
+	}
+
+	.card .box {
+		padding-right: 2em;
+	}
+
+	.card .image {
+		margin: 0;
+	}
+
+
+
+.caption.box {
+	margin: 0;
 }
 
-.responsive {
-	background: hotpink;
+.caption {
+	font-size: .6rem;
+    color: var(--light-gray);
+    font-style: italic;
+}
+
+
+/*--images--*/
+
+#left {
+	background: url("../images/lynx.jpg") no-repeat top center;
+	background-size: cover;
+	}
+
+#center {
+	background: url("../images/monkey.jpg") no-repeat top center;
+	background-size: cover;
+	
+	}
+
+
+#right {
+	background: url("../images/lynx2.jpg") no-repeat top center;
+	background-size: cover;
+	}
+
+
+
+
+/*--blockquote--*/
+
+
+
+.blockquote {
+	border: 1px solid #E0E2E4;
+	padding: 2rem 0;
+	
+}
+
+.blockquote p {
+	font-size: 1.5rem;
+}
+
+.blockquote .citation {
+	font-size: .8rem;
+	color: var(--light-gray);
 }
