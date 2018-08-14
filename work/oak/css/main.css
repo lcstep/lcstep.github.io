@@ -42,10 +42,13 @@ main {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	border-bottom: 1px solid var(--gray-04);
+	
 	align-items: center;
 	}
 
+.hero.split {
+	border-bottom: 1px solid var(--gray-04);
+}
 	.hero .headline {
 		flex: 1;
 		transition: flex .6s ease-in-out;
@@ -85,7 +88,7 @@ main {
 	bottom: 70px;
 	left: 25px;
 	color: #fff;
-	width: 80%;
+	width: 90%;
 }
 
 button {
