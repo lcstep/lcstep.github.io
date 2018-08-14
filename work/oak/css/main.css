@@ -1,80 +1,141 @@
 * { box-sizing: border-box; }
 
 html {
-	font-size: 20px;
+	font-size: 16px;
 }
 
 :root{ 
-	--dark-gray: #444649; 
-	--light-gray: #8F9092;
+	--gray-01: #444444;
+	--gray-02: #888888; 
+	--gray-03: #bbbbbb; 
+	--gray-04: #e0e0e0; 
+	
 }
 
 body {
-	font-size: 1rem;
-	line-height: 1.6;
+	font-size: 17px;
+	line-height: 25px;
 	margin: 0;
 	padding: 0;
 	font-family: 'Source Sans Pro', sans-serif;
 	text-align: left;
-	color: var(--dark-gray);
+	color: var(--gray-01);
 	}
 
 
 main {
-	width: 90%;
-	max-width: 960px;
-	margin: 0 auto;
+	
+	margin: 4rem auto;
 	}
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 1200px;
+	/*padding: 0 1rem;*/
+}
 
 
 /*--HERO--*/
 
 .hero {
-	background: url("../images/monkey.jpg") no-repeat top left;
-	background-size: cover;
-	width: 100%;
-	height: 60vh;
+	height: 100vh;
 	display: flex;
-	align-items: center;
+	flex-direction: column;
 	justify-content: center;
-	margin-bottom: 2rem;
+	border-bottom: 1px solid var(--gray-04);
+	align-items: center;
+}
+
+
+
+.hero .headline {
+	flex: 1;
+	}
+
+	.headline h1 {
+		padding-top: 2rem;
+	}
+.hero .image {
+	background: url("../images/scotland.jpg") no-repeat;
+	background-size: cover;
+	height: 100%;
+	
+	
+}
+
+.hero.split .image {
+	flex: 2;
+}
+
+@media only screen and (min-width: 960px) {
+.hero {
+	flex-direction: row;
+	align-items: center;
+	text-align: center;
+	
+}
+
+.hero .headline {
+	flex: 1;
+	}
+.hero.split  .image {
+	flex: 1;
+	height: 100%;
 	}	
 
-	.hero:before {
-	content: '';
+	}
+
+
+button {
 	position: absolute;
-	background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
-	width: 100%;
-	height: 60vh;
-	}
+	bottom: 10px;
+	left: 10px;
+	background: rgba(0,0,0,.2);
+	padding: 10px;
+	border-radius: 3px;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+}
 
-	.hero .row {
-		max-width: 960px;
-		width: 90%;
-	}
-
-
-
-	
 
 /*--TEXT--*/
 
+
+
 h1 {
-		font-size: 2rem;
-		line-height: 1.4;
-		color: #fff;
-		position: relative;
+		font-size: 29px;
+		line-height: 34px;
+		padding: 0 2rem;
 	}
 
-	@media screen and (min-width: 960px) {
-		h1 {
-			font-size: 3rem;
-		}
+.summary {
+	font-size: 19px;
+	line-height: 25px;
+	padding: 0 2rem;
 	}
 
-h3 {
-	font-size: .9rem;
-	}
+.blockquote {
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 600;
+	text-align: center;
+}
+
+.credit {
+	font-size: 10px;
+	line-height: 17px;
+	color: var(--gray-02);
+	font-weight: 400;
+}
+	
+
+.caption {
+	font-size: 12px;
+	line-height: 17px;
+	margin: 0;
+}
+
 
 
 p.intro {
@@ -82,7 +143,35 @@ p.intro {
 	font-size: 1.2rem;
 	}
 
+@media only screen and (min-width: 600px){
+	h1 {
+		font-size: 38px;
+		line-height: 44px;
+		
+	}
+	.summary {
+		font-size: 21px;
+		line-height: 27px;
+		
+	}
+	body {
+		font-size: 19px;
+		line-height: 30px;
+	}
+	.blockquote {
+		font-size: 22px;
+		line-height: 30px;
+	}
+	.caption {
+		font-size: 13px;
+		line-height: 19px;
+	}
+	.credit {
+		font-size: 12px;
+		line-height: 18px;
+	}
 
+}
 
 /*--containers--*/
 
@@ -93,18 +182,37 @@ p.intro {
 	}
 
 .image {
-	padding-bottom: 100%;
-	max-height: 580px;
+	/*max-height: 580px;*/
 	width: 100%;
+	overflow: hidden;
 	}
+
+	
+.box img {
+	width: 100%;
+	object-fit: fill;
+
+}
+
+.fullwidth {
+	height: 600px;
+}
+
+.fullwidth img  {
+	width: 100%;
+	object-fit: fill;
+	
+}
+
+.double {
+	height: 380px;
+}
 
 .little {
 	padding-bottom: 49%;
 	}
 
-.fullwidth {
-	padding-bottom: 50%;
-	}
+
 
 .card {
 	box-shadow: 0 0 20px rgba(0,0,0,.1);
@@ -130,31 +238,10 @@ p.intro {
 	margin: 0;
 }
 
-.caption {
-	font-size: .6rem;
-    color: var(--light-gray);
-    font-style: italic;
-}
+
 
 
 /*--images--*/
-
-#left {
-	background: url("../images/lynx.jpg") no-repeat top center;
-	background-size: cover;
-	}
-
-#center {
-	background: url("../images/monkey.jpg") no-repeat top center;
-	background-size: cover;
-	
-	}
-
-
-#right {
-	background: url("../images/lynx2.jpg") no-repeat top center;
-	background-size: cover;
-	}
 
 
 
@@ -164,16 +251,7 @@ p.intro {
 
 
 .blockquote {
-	border: 1px solid #E0E2E4;
-	padding: 2rem 0;
+	border-top: 1px solid var(--gray-01);
+	border-bottom: 1px solid var(--gray-01);
 	
-}
-
-.blockquote p {
-	font-size: 1.5rem;
-}
-
-.blockquote .citation {
-	font-size: .8rem;
-	color: var(--light-gray);
 }
