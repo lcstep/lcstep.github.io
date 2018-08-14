@@ -44,47 +44,65 @@ main {
 	justify-content: center;
 	border-bottom: 1px solid var(--gray-04);
 	align-items: center;
-}
-
-
-
-.hero .headline {
-	flex: 1;
 	}
 
-	.headline h1 {
-		padding-top: 2rem;
-	}
-.hero .image {
-	background: url("../images/scotland.jpg") no-repeat;
-	background-size: cover;
-	height: 100%;
-	
-	
-}
+	.hero .headline {
+		flex: 1;
+		transition: flex .6s ease-in-out;
+		}
 
-.hero.split .image {
-	flex: 2;
-}
+		.headline h1 {
+			padding-top: 2rem;
+		}
+
+	.hero .image {
+		background: url("../images/scotland.jpg") no-repeat;
+		background-size: cover;
+		height: 100%;
+		position: relative;
+		}
+
+	.hero.split .image {
+		flex: 2;
+		
+	}
 
 @media only screen and (min-width: 960px) {
 .hero {
 	flex-direction: row;
 	align-items: center;
 	text-align: center;
-	
-}
+	}
 
 .hero .headline {
 	flex: 1;
 	}
 .hero.split  .image {
 	flex: 1;
-	height: 100%;
 	}	
+}
 
-	}
 
+.hero.full {
+	
+	background: #000;
+	text-align: left;
+
+}
+
+.hero.full .image {
+	opacity: .75;
+	
+
+
+}
+.hero.full .headline {
+	position: absolute;
+	bottom: 70px;
+	left: 25px;
+	color: #fff;
+	width: 70%;
+}
 
 button {
 	position: absolute;
@@ -190,22 +208,23 @@ p.intro {
 	
 .box img {
 	width: 100%;
-	object-fit: fill;
+	object-fit: cover;
 
 }
 
 .fullwidth {
-	height: 600px;
+	max-height: 80vh;
 }
 
 .fullwidth img  {
 	width: 100%;
-	object-fit: fill;
+	object-fit: cover;
+	
 	
 }
 
 .double {
-	height: 380px;
+	max-height: 400px;
 }
 
 .little {
