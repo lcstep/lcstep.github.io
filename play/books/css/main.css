@@ -55,9 +55,12 @@ main {
 	grid-gap: 40px;
 	grid-auto-rows: minmax(100px, auto);
 	color: #333;
+
 }
 
-
+/*.grid article {
+	animation: move-up 1s;
+}*/
 .split {
 	display: flex;
 	justify-content: bottom;
@@ -100,7 +103,8 @@ main {
 }
 
 .cover {
-	transition: transform .8s ease-in-out;
+	/*transition: transform .8s ease-in-out;*/
+
 }
 
 
@@ -198,18 +202,23 @@ main {
 
 
 article {
-    visibility: hidden;
+    opacity: 0;
+    transition: opacity .8s ease-in-out;
 }
 
 .fadeIn {
-    -webkit-animation: animat_show 1s;
-    animation: animat_show 1s;
-    visibility: visible !important;
+    /*-webkit-animation: animat_show 1s, move-up 1s;
+    animation: animat_show 1s;*/
+    opacity: 1;
 }
 
-@-webkit-keyframes animat_show{
+/*@-webkit-keyframes animat_show{
     0%{opacity:0}
     100%{opacity:1}
 }
 
-
+@-webkit-keyframes move-up {
+	from { transform: translateY(0); }
+	to { transform: translateY(-50px); }
+}
+*/

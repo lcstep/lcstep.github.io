@@ -6,6 +6,8 @@ function showImages(el) {
         var topOfWindow = $(window).scrollTop();
         if (topOfWindow + windowHeight - 200 > thisPos ) {
             $(this).addClass("fadeIn");
+            
+    
         } else {
             $(this).removeClass("fadeIn");
         }
@@ -20,6 +22,7 @@ $(document).ready(function(){
 // if the image in the window of browser when scrolling the page, show that image
 $(window).scroll(function() {
     showImages('article');
+   
 });
 
 $(document).ready(function(){
