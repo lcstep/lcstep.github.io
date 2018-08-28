@@ -152,15 +152,19 @@ main {
 	padding-bottom: 120%;
 }
 
-.nature {
+.grid .nature {
 	 grid-column: 5 / span 2;
 	 margin-top: 7rem;
+
 }
 .nature .image  {
 	background-image: url("../media/nature.jpg");
-	padding-bottom: 260%;
+	
 }
 
+.grid .nature .image {
+	padding-bottom: 260%;
+}
 
 .faraway {
 	 grid-column: 8 / span 5;
