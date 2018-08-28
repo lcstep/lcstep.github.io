@@ -107,21 +107,39 @@ main {
 
 }
 
+.previous, .next {
+	width: 15px;
+	position: absolute;
+	bottom: 20px;
 
+}
+
+.previous {
+	left: 20px;
+	fill: #fff;
+}
+
+.next {
+	right: 20px;
+	fill: #ccc;
+}
 .cover .image{
 	background-image: url("../media/cover.jpg");
 	height: 100vh;
 
 	}
 
-.pinebarrens {
+.grid .pinebarrens {
 	 grid-column: 2 / span 4;
 }
 .pinebarrens .image  {
 	background-image: url("../media/pinebarrens.jpg");
-	padding-bottom: 140%;
+	
 }
 
+.grid .pinebarrens .image {
+	padding-bottom: 140%;
+}
 
 .grid .spare {
 	 grid-column: 9 / span 3;
