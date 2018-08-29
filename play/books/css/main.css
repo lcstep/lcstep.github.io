@@ -45,6 +45,7 @@ p {
 	.split .image {
 		flex-basis: 50%;
 		object-fit: cover;
+		height: 100vh;
 		}
 
 	.split .info {
@@ -241,9 +242,13 @@ article {
 */
 
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1240px) {
 	.split .info  {
-		padding: 4rem;
+		padding: 3rem;
+	}
+
+	.split .info p  {
+		margin-left: 3rem;
 	}
 @media screen and (max-width: 960px) {
 	.split {
@@ -252,18 +257,20 @@ article {
 	}
 
 	.split .info  {
-		padding: 1rem;
-		flex-basis: 35%;
+		padding: 3rem;
+		flex-basis: auto;
 	}
 
 	.split .info p {
 		margin-left: 0;
 		margin-top: 1rem;
+
 		line-height: 1.4;
 	}
 
 	.split .image {
-		flex-basis: 65%;
+		flex-basis: auto;
+
 	}
 
 
