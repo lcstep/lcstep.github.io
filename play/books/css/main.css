@@ -254,6 +254,7 @@ article {
 	.split {
 		flex-direction: column;
 		align-items: flex-start;
+		height: auto;
 	}
 
 	.split .info  {
@@ -269,7 +270,7 @@ article {
 	}
 
 	.split .image {
-		flex-basis: auto;
+		height: 70vh;
 
 	}
 
@@ -311,7 +312,7 @@ article {
 
 		.grid .heart {
 			 grid-column: 5 / span 2;
-			 margin-top: 0rem;
+			 margin-top: 5.5rem;
 
 			 }
 		 .grid .iam {
