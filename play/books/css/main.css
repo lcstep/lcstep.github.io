@@ -196,7 +196,7 @@ article {
 .grid .heart {
 	 grid-column: 10 / span 3;
 	 margin-top: 5rem;
-	}
+	 }
 
 	.heart .image  {
 		background-image: url("../media/heart.jpg");
@@ -270,6 +270,47 @@ article {
 	.previous {
 		fill: #ccc;
 	}
+
+
+	main {
+		margin: 2rem auto;
+	}
+	.grid {
+		grid-template-columns: repeat(6, 1fr);
+		grid-gap: 1rem;
+		margin: 0 1rem;
+		}
+		.grid .pinebarrens {
+			 grid-column: 1 / span 4;
+			}	
+
+		.grid .spare {
+			 grid-column: 3 / span 4;
+			 margin-top: 0rem;
+			 }
+
+		.grid .nature {
+			 grid-column: 1 / span 2;
+			 margin-top: -10rem;
+			 }
+		.grid .faraway {
+			 grid-column: 3 / span 4;
+			 margin-top: 0rem;
+			 }
+		.grid .autobio {
+			 grid-column: 1 / span 4;
+			 margin-top: 0rem;
+			 }
+
+		.grid .heart {
+			 grid-column: 5 / span 2;
+			 margin-top: 0rem;
+
+			 }
+		 .grid .iam {
+			 grid-column: 1 / span 4;
+			 margin-top: 0rem;
+				}
 
 }
 
