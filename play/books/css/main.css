@@ -49,6 +49,15 @@ main {
 	margin: 6rem auto;
 }
 
+.logo {
+	position: absolute;
+	z-index: 100;
+	left: 1rem;
+	top: 1rem;
+}
+.logo img {
+	width: 1.2rem;
+}
 .grid {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
@@ -134,12 +143,12 @@ main {
 }
 .pinebarrens .image  {
 	background-image: url("../media/pinebarrens.jpg");
-	
 }
 
 .grid .pinebarrens .image {
 	padding-bottom: 140%;
 }
+
 
 .grid .spare {
 	 grid-column: 9 / span 3;
@@ -151,6 +160,7 @@ main {
 .grid .spare .image  {
 	padding-bottom: 120%;
 }
+
 
 .grid .nature {
 	 grid-column: 5 / span 2;
@@ -166,42 +176,53 @@ main {
 	padding-bottom: 260%;
 }
 
-.faraway {
+.grid .faraway {
 	 grid-column: 8 / span 5;
 	 margin-top: 22rem;
 }
 .faraway .image  {
 	background-image: url("../media/faraway.jpg");
+}
+
+.grid .faraway .image {
 	padding-bottom: 140%;
 }
 
-.autobio {
+.grid .autobio {
 	 grid-column: 1 / span 5;
 	 margin-top: -21rem;
 }
 .autobio .image  {
 	background-image: url("../media/autobio.jpg");
+}
+
+.grid .autobio .image {
 	padding-bottom: 120%;
 }
 
-.heart {
+.grid .heart {
 	 grid-column: 10 / span 3;
 	 margin-top: 5rem;
 }
 .heart .image  {
 	background-image: url("../media/heart.jpg");
+}
+
+.grid .heart .image {
 	padding-bottom: 185%;
 }
 
-.iam {
+.grid .iam {
 	 grid-column: 4 / span 5;
 	 margin-top: -10rem;
 }
 .iam .image  {
 	background-image: url("../media/iam.jpg");
-	padding-bottom: 110%;
 }
 
+.grid .iam .image {
+	padding-bottom: 110%;
+}
 /*@media screen and (min-width: 1400px) {
 	.grid {
 		grid-template-columns: repeat(4, 1fr);
