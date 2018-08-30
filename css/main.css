@@ -85,7 +85,9 @@ svg {
 
 
 footer {
-	margin-left: 6rem;
+	position: absolute;
+	bottom: 1rem;
+	right: 1rem;
 	font-size: 14px;
 	opacity: .7;
 }
@@ -97,7 +99,7 @@ footer {
 		height:100vh;*/
 	}
 
-	.info, footer {
+	.info {
 		margin: 2rem 1rem;
 		width: 90%;
 	}
