@@ -111,6 +111,7 @@ main {
 article {
     opacity: 0;
     transition: opacity .8s ease-in-out;
+
 	}
 
 .fadeIn {
@@ -120,7 +121,32 @@ article {
 
 /*---IMAGES---*/
 
+.grid .image {
+	transition: opacity .2s ease-in-out;
+	position: relative;
+	
+}
 
+.grid .image::after {
+	content: "";
+	background: #000;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	opacity: .1;
+	transition: opacity .3s ease-in-out;
+}
+
+.grid .image:hover::after {
+	opacity: 0;
+}
+
+
+.grid .image:hover {
+	opacity: 1;
+}
 
 .image {
 	background-size: cover;
@@ -134,6 +160,7 @@ article {
 
 	.pinebarrens .image  {
 		background-image: url("../media/pinebarrens.jpg");
+
 		}
 
 		.grid .pinebarrens .image {
@@ -196,7 +223,7 @@ article {
 
 .grid .heart {
 	 grid-column: 10 / span 3;
-	 margin-top: 5rem;
+	 margin-top: 10rem;
 	 }
 
 	.heart .image  {
@@ -208,7 +235,7 @@ article {
 			}
 
 .grid .iam {
-	 grid-column: 4 / span 5;
+	 grid-column: 1 / span 5;
 	 margin-top: -10rem;
 	}
 
@@ -218,6 +245,67 @@ article {
 
 		.grid .iam .image {
 			padding-bottom: 110%;
+			}
+.grid .body {
+	 grid-column: 6 / span 7;
+	 margin-top: 20rem;
+	}
+
+	.body .image  {
+		background-image: url("../media/body.jpg");
+		background-position: top center;
+		}
+
+		.grid .body .image {
+			padding-bottom: 60%;
+			}
+.grid .homegoing {
+	 grid-column: 2 / span 3;
+	 margin-top: -5rem;
+	}
+
+	.homegoing .image  {
+		background-image: url("../media/homegoing.jpg");
+		}
+
+		.grid .homegoing .image {
+			padding-bottom: 130%;
+			}
+.grid .motherhood {
+	 grid-column: 6 / span 2;
+	 margin-top: 15rem;
+	}
+
+	.motherhood .image  {
+		background-image: url("../media/motherhood.jpg");
+		}
+
+		.grid .motherhood .image {
+			padding-bottom: 260%;
+			}
+.grid .exitwest {
+	 grid-column: 9 / span 4;
+	 margin-top: 40rem;
+	}
+
+	.exitwest .image  {
+		background-image: url("../media/exitwest.jpg");
+		}
+
+		.grid .exitwest .image {
+			padding-bottom: 130%;
+			}
+.grid .everything {
+	 grid-column: 2 / span 4;
+	 margin-top: -10rem;
+	}
+
+	.everything .image  {
+		background-image: url("../media/everything.jpg");
+		}
+
+		.grid .everything .image {
+			padding-bottom: 120%;
 			}
 
 /*---FOOTER---*/
