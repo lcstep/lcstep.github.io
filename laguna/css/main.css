@@ -11,7 +11,7 @@ body {
 	line-height: 1.5;
 }
 
-h1 {
+.title {
 	font-family: 'Inconsolata', sans-serif;
 	top: 85vh;
 	margin-left: 10vh;
@@ -21,6 +21,7 @@ h1 {
 	position: sticky;
 	font-size: 2rem;
 	z-index: 100;
+	padding-bottom: 2rem;
 }
 
 
