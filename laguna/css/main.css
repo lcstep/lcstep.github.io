@@ -18,7 +18,7 @@ body {
 	color: #fff;
 	font-weight: 400;
 	letter-spacing: 3px;
-	-webkit-position: sticky;
+	position: -webkit-sticky;
 	position: sticky;
 	font-size: 2rem;
 	z-index: 100;
