@@ -13,7 +13,7 @@ body {
 
 .title {
 	font-family: 'Inconsolata', sans-serif;
-	top: 85vh;
+	top: 75vh;
 	margin-left: 10vh;
 	color: #fff;
 	font-weight: 400;
@@ -96,5 +96,16 @@ article {
 @media screen and (min-width: 900px) {
 	.text {
 		width: 600px;
+	}
+}
+
+
+@media screen and (min-width: 600px) {
+	.text {
+		width: 600px;
+	}
+
+	.title {
+		top: 85vh;
 	}
 }
