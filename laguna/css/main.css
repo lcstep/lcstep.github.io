@@ -95,89 +95,80 @@ article {
 	cursor: url(../media/zoom.png), auto;
 }
 
-.grid article:nth-child(1) {
+.one article:nth-child(1) {
 	grid-column: 4 / span 6;
 }
 
-.grid article:nth-child(2) {
+.one article:nth-child(2) {
 	grid-column: 2 / span 5;
 }
 
-.grid article:nth-child(3) {
+.one article:nth-child(3) {
 	grid-column: 7 / span 5;
 }
 
-.grid article:nth-child(4) {
+.one article:nth-child(4) {
 	grid-column: 8 / span 3;
 }
 
-.grid article:nth-child(5) {
+.one article:nth-child(5) {
 	grid-column: 2 / span 3;
 }
 
-.grid article:nth-child(6) {
+.one article:nth-child(6) {
 	grid-column: 5 / span 3;
 }
 
-.grid article:nth-child(7) {
+.one article:nth-child(7) {
 	grid-column: 6 / span 3;
 }
 
-.grid article:nth-child(8) {
+.one article:nth-child(8) {
 	grid-column: 9 / span 3;
 }
 
-.grid article:nth-child(9) {
+.one article:nth-child(9) {
 	grid-column: 4 / span 6;
 }
 
-.grid article:nth-child(10) {
+.two article:nth-child(1) {
 	grid-column: 2 / span 4;
 }
 
-.grid article:nth-child(11) {
+.two article:nth-child(2) {
 	grid-column: 1 / span 12;
 	margin-top: -20rem;
 	z-index: -1;
 }
 
-.grid article:nth-child(12) {
+.two article:nth-child(3) {
 	grid-column: 2 / span 5;
 	margin-top: -25rem;
 }
 
-.grid article:nth-child(13) {
+.two article:nth-child(4) {
 	grid-column: 7 / span 5;
 	margin-top: -15rem;
 }
 
-.grid article:nth-child(14) {
+.two article:nth-child(5) {
 	grid-column: 3 / span 3;
-	/*margin-top: -15rem;*/
+	margin-top: 5rem;
 }
 
-.grid article:nth-child(15) {
+.two article:nth-child(6) {
 	grid-column: 7 / span 5;
-	/*margin-top: -15rem;*/
+	margin-top: 20rem;
 }
 
 
-.wide-grid {
-	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-	grid-gap: 40px;
-	grid-auto-rows: minmax(100px, auto);
-	width: 120vw;
-	  overflow-y: auto;
-  overflow-x: hidden;
+.two  article:nth-child(7) {
+	grid-column: 1 / span 6;
+	margin-top: 8rem;
 }
-.wide-grid article:nth-child(1) {
-	grid-column: 2 / span 7;
-	/*margin-top: -15rem;*/
-}
-.wide-grid article:nth-child(2) {
-	grid-column: 9 / span 7;
-	/*margin-top: -15rem;*/
+.two  article:nth-child(8) {
+	grid-column: 7 / span 6;
+	margin-top: 8rem;
 }
 
 
@@ -200,4 +191,6 @@ article {
 	.title {
 		top: 85vh;
 	}
+
+
 }
