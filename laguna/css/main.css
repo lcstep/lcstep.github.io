@@ -61,8 +61,8 @@ p.credit {
 	
 }
 
-.audio_toggle img {
-	text-align: left;
+.on img, .off img {
+	width: 30px;
 }
 
 .on, .off {
