@@ -1,3 +1,4 @@
+
 function showImages(el) {
     var windowHeight = $( window ).height();
     $(el).each(function(){
@@ -37,3 +38,19 @@ $(document).ready(function(){
         })
     })
 })
+
+
+
+var x = document.getElementById("laguna_audio1"); 
+
+function playAudio() { 
+    x.play(); 
+    $(".on").css("display", "none");
+    $(".off").css("display", "inline-block");
+} 
+
+function pauseAudio() { 
+    x.pause(); 
+    $(".off").css("display", "none");
+    $(".on").css("display", "inline-block");
+}

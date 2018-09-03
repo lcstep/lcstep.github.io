@@ -6,11 +6,28 @@
 	<link href="https://fonts.googleapis.com/css?family=Inconsolata:400" rel="stylesheet">
 	<link href="css/normalize.css" rel="stylesheet" type="text/css">
 	<link href="css/main.css" rel="stylesheet" type="text/css">
+	<script>
+		
+</script>
 </head>
 <body>
 	<section class="cover">
-		<article><div class="title">laguna beach</div>
+		<article>
+			<div class="title">
+				laguna beach
+				<div href="#" onclick="playAudio()" class="audio_toggle on">
+		  			<img src="media/vol-on.png">
+  				</div>
+		  		<div onclick="pauseAudio()" class="audio_toggle off">
+		  			<img src="media/vol-off.png">
+		  		</div>
+	  		</div>
 		<img class="hero" src="media/hero.jpg"></article>
+		<audio loop id="laguna_audio1">
+			  <source src="media/laguna-1.mp3" type="audio/mpeg">
+  		</audio>
+  		
+
 	</section>
 	<main>
 		<section class="text">
