@@ -322,6 +322,7 @@ video {
 .video {
 	display: inline-block;
 	position: absolute;
+
 	
 	}
 
@@ -335,6 +336,7 @@ video {
 	font-size: 20px;
 	height: 20px;
 	-webkit-transform: translateZ(0);
+
 
 	}
 
