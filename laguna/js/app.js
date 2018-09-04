@@ -33,9 +33,8 @@ $(document).ready(function(){
         var st = $(this).scrollTop();
         cover.css({
             'opacity': .2 + st / 1000
-
-
         })
+       
     })
 })
 
@@ -54,3 +53,18 @@ function pauseAudio() {
     $(".off").css("display", "none");
     $(".on").css("display", "inline-block");
 }
+
+
+$(window).scroll(function() {
+    var top_of_element = $(".cover").offset().top;
+    var bottom_of_element = $(".cover").offset().top + $(".cover").outerHeight();
+    var bottom_of_screen = $(window).scrollTop() + window.innerHeight;
+    var top_of_screen = $(window).scrollTop();
+
+    if((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)){
+       
+    }
+    else {
+        pauseAudio();
+    }
+});
