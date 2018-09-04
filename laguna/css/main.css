@@ -14,7 +14,7 @@ body {
 .title {
 	font-family: 'Inconsolata', sans-serif;
 	top: 75vh;
-	margin: 0 10vh;
+	margin: 0 2vh;
 	color: #fff;
 	font-weight: 400;
 	letter-spacing: 3px;
@@ -114,7 +114,7 @@ main {
 article {
     opacity: 0;
     transition: opacity .6s ease-in-out;
-    margin: 6rem 0;
+    margin: 0;
 	}
 
 .fadeIn {
@@ -139,96 +139,146 @@ article {
 .one article:nth-child(3) {
 	grid-column: 4 / span 3;
 	}
+.one article:nth-child(4) {
+	grid-column: 2 / span 4;
+	}
+.one article:nth-child(5) {
+	grid-column: 1 / span 3;
+	}
+.one article:nth-child(6) {
+	grid-column: 4 / span 3;
+	}
+.one article:nth-child(7) {
+	grid-column: 1 / span 3;
+	}
+.one article:nth-child(8) {
+	grid-column: 4 / span 3;
+	}
+.one article:nth-child(9) {
+	grid-column: 1 / span 6;
+	}
+.two article:nth-child(1) {
+	grid-column: 2 / span 4;
+	}
+.two article:nth-child(2) {
+	grid-column: 1 / span 6;
+	margin-top: -10rem;
+	z-index: -1;
+	}
+.two article:nth-child(3) {
+	grid-column: 1 / span 3;
+	margin-top: -10rem;
+	}
+.two article:nth-child(4) {
+	grid-column: 4 / span 3;
+	margin-top: -5rem;
+	}
 
+.two article:nth-child(5) {
+	grid-column: 2 / span 4;
+	}
+.two article:nth-child(6) {
+	grid-column: 1 / span 6;
+	}
+.two article:nth-child(7) {
+	grid-column: 1 / span 3;
+	}
+.two article:nth-child(8) {
+	grid-column: 4 / span 3;
+	}
 @media screen and (min-width: 900px) {
 	.text {
 		width: 600px;
 	}
-
-
-.grid {
-	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-	grid-gap: 40px;
-	grid-auto-rows: minmax(100px, auto);
+	.title {
+		margin: 0 10vh;
 	}
-
-
-		.one article:nth-child(1) {
-			grid-column: 4 / span 6;
-		}
-
-		.one article:nth-child(2) {
-			grid-column: 2 / span 5;
-		}
-
-		.one article:nth-child(3) {
-			grid-column: 7 / span 5;
-		}
-
-		.one article:nth-child(4) {
-			grid-column: 8 / span 3;
-		}
-
-		.one article:nth-child(5) {
-			grid-column: 2 / span 3;
-		}
-
-		.one article:nth-child(6) {
-			grid-column: 5 / span 3;
-		}
-
-		.one article:nth-child(7) {
-			grid-column: 6 / span 3;
-		}
-
-		.one article:nth-child(8) {
-			grid-column: 9 / span 3;
-		}
-
-		.one article:nth-child(9) {
-			grid-column: 4 / span 6;
-		}
-
-		.two article:nth-child(1) {
-			grid-column: 2 / span 4;
-		}
-
-		.two article:nth-child(2) {
-			grid-column: 1 / span 12;
-			margin-top: -20rem;
-			z-index: -1;
-		}
-
-		.two article:nth-child(3) {
-			grid-column: 2 / span 5;
-			margin-top: -25rem;
-		}
-
-		.two article:nth-child(4) {
-			grid-column: 7 / span 5;
-			margin-top: -15rem;
-		}
-
-		.two article:nth-child(5) {
-			grid-column: 3 / span 3;
-			margin-top: 5rem;
-		}
-
-		.two article:nth-child(6) {
-			grid-column: 7 / span 5;
-			margin-top: 20rem;
+	article {
+		margin: 6rem 0;
+	}
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-gap: 40px;
+		grid-auto-rows: minmax(100px, auto);
 		}
 
 
-		.two  article:nth-child(7) {
-			grid-column: 1 / span 6;
-			margin-top: 8rem;
-		}
-		.two  article:nth-child(8) {
-			grid-column: 7 / span 6;
-			margin-top: 8rem;
-		}
+			.one article:nth-child(1) {
+				grid-column: 4 / span 6;
+				}
+
+			.one article:nth-child(2) {
+				grid-column: 2 / span 5;
+				}
+
+			.one article:nth-child(3) {
+				grid-column: 7 / span 5;
+				}
+
+			.one article:nth-child(4) {
+				grid-column: 8 / span 3;
+				}
+
+			.one article:nth-child(5) {
+				grid-column: 2 / span 3;
+				}
+
+			.one article:nth-child(6) {
+				grid-column: 5 / span 3;
+				}
+
+			.one article:nth-child(7) {
+				grid-column: 6 / span 3;
+				}
+
+			.one article:nth-child(8) {
+				grid-column: 9 / span 3;
+				}
+
+			.one article:nth-child(9) {
+				grid-column: 4 / span 6;
+				}
+
+			.two article:nth-child(1) {
+				grid-column: 2 / span 4;
+				}
+
+			.two article:nth-child(2) {
+				grid-column: 1 / span 12;
+				margin-top: -20rem;
+				z-index: -1;
+				}
+
+			.two article:nth-child(3) {
+				grid-column: 2 / span 5;
+				margin-top: -25rem;
+				}
+
+			.two article:nth-child(4) {
+				grid-column: 7 / span 5;
+				margin-top: -15rem;
+				}
+
+			.two article:nth-child(5) {
+				grid-column: 3 / span 3;
+				margin-top: 5rem;
+				}
+
+			.two article:nth-child(6) {
+				grid-column: 7 / span 5;
+				margin-top: 20rem;
+				}
+
+
+			.two  article:nth-child(7) {
+				grid-column: 1 / span 6;
+				margin-top: 8rem;
+				}
+			.two  article:nth-child(8) {
+				grid-column: 7 / span 6;
+				margin-top: 8rem;
+				}	
 
 
 }
