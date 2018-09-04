@@ -70,7 +70,7 @@ ul li p {
 
 .info {
 	width: 60%; 
-	margin: 10rem 6rem;
+	margin: 12vh 6rem;
 }
 
 
@@ -87,9 +87,17 @@ svg {
 footer {
 	position: absolute;
 	bottom: 1rem;
-	right: 1rem;
+	/*right: 1rem;*/
 	font-size: 14px;
 	opacity: .7;
+}
+
+@media screen and  (max-width: 900px) {
+
+	.info {
+		margin: 7vh 1rem;
+		width: 90%;
+	}
 }
 
 
