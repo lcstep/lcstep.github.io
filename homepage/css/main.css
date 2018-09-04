@@ -94,10 +94,6 @@ footer {
 
 
 @media screen and  (max-width: 600px) {
-	video {
-		/*max-width: none;
-		height:100vh;*/
-	}
 
 	.info {
 		margin: 2rem 1rem;
