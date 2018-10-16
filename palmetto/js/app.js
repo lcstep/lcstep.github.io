@@ -36,10 +36,10 @@ $(document).ready(function(){
         var st = $(this).scrollTop();
         
         img.css({
-            'opacity': 1 - st / 1000
+            'opacity': 1 - st / 600
         })
         text.css({
-        	'opacity': 1 - st / 500
+        	'opacity': 1 - st / 300
         })
         intro.css({
             'opacity': 0 + st / 800
