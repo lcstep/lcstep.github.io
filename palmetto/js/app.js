@@ -39,7 +39,7 @@ $(document).ready(function(){
             'opacity': 1 - st / 600
         })
         text.css({
-        	'opacity': 1 - st / 300
+        	'opacity': 1 - st / 400
         })
         intro.css({
             'opacity': 0 + st / 800
