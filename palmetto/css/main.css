@@ -83,8 +83,14 @@ h2 {
 
 .intro {
 	opacity: 0;
-	width: 55vw;
+	width: 100%;
 	color: #444;
+	justify-content: center;
+	align-items: center;
+	}
+
+	.intro h2 {
+		padding: 20%;
 	}
 
 /*---MAIN GRID---*/
