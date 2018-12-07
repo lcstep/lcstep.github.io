@@ -1,0 +1,40 @@
+* {
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+  	
+}
+
+nav {
+	position: absolute;
+	margin: 20px;
+}
+
+
+nav img {
+	width: 180px;
+}
+.cover {
+	width: 100%;
+	height: 100vh;
+	background-image: url(../media/hero.jpg);
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	color: #fff;
+	
+}
+
+
+
+
+
+.cover::before {
+	content: "";
+	background: rgba(0,0,0,.2);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 0;
+
+}

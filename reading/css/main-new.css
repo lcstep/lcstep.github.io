@@ -1,0 +1,78 @@
+* {
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	font-family:  'PT Mono', monospace;
+	background: #f7f7f7;
+	margin: 30px;
+}
+
+
+/*---TEXT---*/
+
+h1, h2, h3, h4, h5, h6, p {
+	font-weight: 400;
+}
+
+h1 {
+	color: #212121;
+	font-size: 16px;
+	
+}
+
+h2 {
+	color: #676767;
+	font-size: 14px;
+	}
+
+
+p {
+	font-size: 14px;
+	line-height: 1.8;
+	}
+
+
+
+/*---hero area---*/
+
+section {
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
+	grid-gap: 0px;
+	grid-auto-rows: minmax(100px, auto);
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.hero h1 {
+	grid-column: 1 / span 4;
+	font-size: 35px;
+	font-weight: 700;
+}
+
+.hero p {
+	grid-column: 2 / span 4;
+}
+
+.hero img {
+	grid-column: 7 / span 4;
+	width: 100%;
+	box-shadow: 20px 20px 0 rgba(0,0,0,.1);
+}
+
+.logo img {
+	width: 40px;
+
+}
+
+
+/*list*/
+
+section.list {
+	background: #fff;
+}
+
+
