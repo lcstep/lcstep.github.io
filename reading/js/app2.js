@@ -1,13 +1,11 @@
-// Create a request variable and assign a new XMLHttpRequest object to it.
-let request = new XMLHttpRequest();
+let googleSheet = "https://spreadsheets.google.com/feeds/list/1Qw7VnlojnNQ1Nj6bsAxZqKd5DYFcRkMCZv94bBIZESY/od6/public/values?alt=json"
 
-// Open a new connection, using the GET request on the URL endpoint
-request.open('GET', 'https://www.dropbox.com/oauth2/authorize?client_id=<APP_KEY>&response_type=code', true);
+// fetch() is a global function that makes an API call and returns JSON 
 
-request.onload = function () {
-  // Begin accessing JSON data here
-  }
+fetch(googleSheet)
+  .then(response => response.json())
+  .then( data => render(data))
 
-
-// Send request
-request.send();
+function render(data){
+  console.log(data)
+}
