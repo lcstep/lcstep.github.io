@@ -108,12 +108,15 @@ footer p {
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0;
+	-webkit-column-gap: 80px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 80px; /* Firefox */
+  	column-gap: 80px;
 
 }
 
 .list ul li {
 	list-style: none;
-	padding: .5rem 0;
+	padding: .7rem 0;
 	line-height: 1.5;
 }
 
@@ -144,16 +147,25 @@ footer p {
 }
 
 form {
-	display: flex;
-	grid-column: 1 / span 10;
-	flex-direction: column;
-	margin: 4rem 0;
+	display: grid;
+    grid-column: 6 / span 5;
+    margin: 4rem 0;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
 }
 
-form #rec {
-	height: 120px;
+form .input {
+	display: flex;
+	flex-direction: column;
+}
+form label {
+	font-size: 11px;
+}
+form input {
+	height: 50px;
 	border: none;
-	padding: 4rem;
+	padding: 1rem;
 	transition: outline-color .3s linear;
 	outline: 0px solid transparent;
 }

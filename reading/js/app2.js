@@ -52,9 +52,23 @@ function makeUL(array) {
 // Add the contents of to #book-list:
 document.getElementById('book-list').appendChild(makeUL(Books));
   
-  
-  
 }
+
+
+var $form = $('form#book-suggestion'),
+    url = 'https://script.google.com/macros/s/AKfycbx8weRS0fi1STZPKYfvy2WVUnVYwv7FBuIB4yYKi7uBbkOAyPw/exec'
+
+$('#submit-form').on('click', function(e) {
+  e.preventDefault();
+  var jqxhr = $.ajax({
+    url: url,
+    method: "GET",
+    dataType: "json",
+    data: $form.serializeObject()
+  }).success(
+    // do something
+  );
+})
 
 
 
