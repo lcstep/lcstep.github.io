@@ -25,7 +25,7 @@ function render(data) {
   
   let bookList = book => `${book.title}, ${book.author}`;
   
-  
+// create the list of books
 function makeUL(array) {
     // Create the list element:
     var list = document.createElement('ul');
@@ -54,12 +54,13 @@ document.getElementById('book-list').appendChild(makeUL(Books));
   
 }
 
-
+// set up write-to google sheets
 var $form = $('form#book-suggestion'),
     url = 'https://script.google.com/macros/s/AKfycbx8weRS0fi1STZPKYfvy2WVUnVYwv7FBuIB4yYKi7uBbkOAyPw/exec'
 
 $('#submit-form').on('click', function(e) {
   e.preventDefault();
+  $('#thanks').removeClass('hidden');
   var jqxhr = $.ajax({
     url: url,
     method: "GET",
@@ -69,6 +70,11 @@ $('#submit-form').on('click', function(e) {
     // do something
   );
 })
+
+// clear form after submissions
+document.getElementById("submit-form").onclick = function () {
+    document.getElementById("book-suggestion").reset();
+}
 
 
 
