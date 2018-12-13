@@ -139,8 +139,13 @@ footer p {
 
 .read {
 	color: #1B14F5;
-	text-decoration: underline;
+	/*text-decoration: underline;*/
 	/*text-decoration-skip: edges;*/
+	
+}
+
+.read:hover {
+	text-decoration: underline;
 }
 
 .author {
