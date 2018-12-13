@@ -77,4 +77,8 @@ document.getElementById("submit-form").onclick = function () {
 }
 
 
+// $("#sidebar_img").hover(function(){
+//   $("#sidebar_img").src="../media/everything.jpg";
+// })
+
 
