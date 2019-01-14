@@ -82,3 +82,46 @@ document.getElementById("submit-form").onclick = function () {
 // })
 
 
+
+// fade cover
+
+$(document).ready(function(){
+    let img = $("#bg img");
+    let text = $("#intro");
+    // let title = $('header h1')
+
+    let h = window.innerHeight;
+    $(window).on('scroll', function () {
+        let st = $(this).scrollTop();
+        
+        img.css({
+            'opacity': 1 - st / 600
+        })
+        text.css({
+          'opacity': 1 - st / 400
+        })
+        
+        if (st > h) {
+          $('header h1').css({
+          'color': '#212121'
+        })
+          $('#logo').css({
+            'fill': '#212121'
+          })
+          $('header').css({
+           'background': '#f7f7f7'
+          })
+        } else {
+           $('header h1').css({
+          'color': '#fff'
+        })
+          $('#logo').css({
+            'fill': '#fff'
+          })
+          $('header').css({
+           
+            'background': 'transparent'
+          })
+        }
+    })
+})
