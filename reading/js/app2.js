@@ -95,33 +95,29 @@ $(document).ready(function(){
         let st = $(this).scrollTop();
         
         img.css({
-            'opacity': 1 - st / 600
+            'opacity': 1 - st / 300,
+            'transform': 'translateX(-60px)'
         })
         text.css({
           'opacity': 1 - st / 400
         })
         
-        if (st > h) {
-          $('header h1').css({
-          'color': '#212121'
-        })
-          $('#logo').css({
-            'fill': '#212121'
+        if (st > h * 1.2) {
+        
+          $('#bg').css({
+           'width': '30%'
           })
-          $('header').css({
-           'background': '#f7f7f7'
+          img.css({
+            'opacity': 1,
+            'transform': 'translateX(0px)'
           })
+
         } else {
-           $('header h1').css({
-          'color': '#fff'
-        })
-          $('#logo').css({
-            'fill': '#fff'
+        //  
+          $('#bg').css({
+           'width': '60%'
           })
-          $('header').css({
-           
-            'background': 'transparent'
-          })
+          
         }
     })
 })
