@@ -82,8 +82,43 @@ footer p {
 
 #logo {
 	width: 30px;
-	fill: #fff;
+	
 }
+
+
+#logo path {
+  stroke-dashoffset: 1000;
+	stroke-dasharray: 1000;
+   stroke: #fff;
+  fill: #fff;
+	fill-opacity: 0;
+  -webkit-animation: draw 2s forwards, FillIn .5s 2s ease-in forwards;
+  -moz-animation: draw 2s forwards, FillIn .5s 2s ease-in forwards;
+	animation: draw 2s forwards, FillIn .5s 2s ease-in forwards;
+
+}
+
+	@-webkit-keyframes draw {
+		to {
+
+			stroke-dashoffset: 2000;
+		}
+	}
+  @-moz-keyframes draw {
+		to {
+			stroke-dashoffset: 2000;
+		}
+	}
+	@keyframes draw {
+		to {
+			stroke-dashoffset: 2000;
+		}
+	}
+	@keyframes FillIn {
+	  from { fill-opacity: 0; }
+	  to { fill-opacity: 1; }
+}	
+
 
 header {
 	position: fixed;
