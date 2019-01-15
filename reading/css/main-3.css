@@ -63,7 +63,10 @@ footer p {
 	position: fixed;
 	height: 100vh;
 	width: 60%;
-	
+	margin-left: 0;
+	transition: opacity, width, margin-left;
+	transition-duration: .5s, 0s, .5s;
+	transition-delay: 0s, 0s, 0s;
 
 }
 
@@ -73,8 +76,7 @@ footer p {
 	object-fit: cover;
 	top: 0;
 	object-position: top left;
-	transition: opacity .6s ease-in-out,
-				transform 1s ease-in-out;
+	
 
 }
 

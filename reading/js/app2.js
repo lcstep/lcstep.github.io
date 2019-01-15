@@ -94,30 +94,35 @@ $(document).ready(function(){
     $(window).on('scroll', function () {
         let st = $(this).scrollTop();
         
-        img.css({
-            'opacity': 1 - st / 300,
-            'transform': 'translateX(-60px)'
-        })
+        $('#bg').css({
+              'opacity': 1 - st / 300,
+              'margin-left': - (st / 2)
+          })
+        
         text.css({
-          'opacity': 1 - st / 400
+           'opacity': 1 - st / 300
         })
-        
-        if (st > h * 1.2) {
-        
+        if (st > h * .9) {
           $('#bg').css({
-           'width': '30%'
-          })
-          img.css({
+            'width': '30%',
             'opacity': 1,
-            'transform': 'translateX(0px)'
+            'margin-left': 0
           })
-
-        } else {
+        }
+          
+         else {
         //  
           $('#bg').css({
-           'width': '60%'
-          })
-          
+            
+            'margin-left': - (st / 2)
+          }, setTimeout(function(){
+            $('#bg').css({
+              'width': '60%'
+            },0)
+          }))
         }
+
+        
     })
-})
+  })
+
