@@ -1,58 +1,57 @@
-let sheetData = "https://spreadsheets.google.com/feeds/list/1Qw7VnlojnNQ1Nj6bsAxZqKd5DYFcRkMCZv94bBIZESY/od6/public/values?alt=json";
-let Books = [];
+let sheetData =
+  "https://spreadsheets.google.com/feeds/list/1Qw7VnlojnNQ1Nj6bsAxZqKd5DYFcRkMCZv94bBIZESY/od6/public/values?alt=json";
+let books = [];
 
 fetch(sheetData)
   .then(res => res.json())
-  .then(data => render(data))
+  .then(data => render(data));
 
 function render(data) {
-  //console.log(data)
-  let booksList = data;
-   //console.log(booksList)
-  let entries = booksList.feed.entry;
-  //console.log(entries)
-  
-  entries.map(function (entry) {
-    Books.push({
-      //`${entry.gsx$title.$t}, ${entry.gsx$author.$t}`
-      title: entry.gsx$title.$t,
-      author: entry.gsx$author.$t, 
-      status: entry.gsx$status.$t
-      
-    });
+  let entries = data.feed.entry;
+  console.log('entries', entries)
+  entries.forEach(book => {
+    let eachBook = new Book(
+      book.gsx$title.$t,
+      book.gsx$author.$t,
+      book.gsx$status.$t,
+      book.gsx$image.$t
+    );
+    books.push(eachBook);
   });
-  
-  
-  let bookList = book => `${book.title}, ${book.author}`;
-  
-// create the list of books
-function makeUL(array) {
-    // Create the list element:
-    var list = document.createElement('ul');
-    
-    array.map(book => {
-        var item = document.createElement('li');
-        
-      if (book.status === 'read') {
-        item.classList = 'read';
-      } else if (book.status === 'reading') {
-         item.classList = 'reading';
-      }
-        // Set its contents:
-        item.appendChild(document.createTextNode(bookList(book)));
 
-        // Add it to the list:
-        list.appendChild(item);
-    });
-
-    // Finally, return the constructed list:
-    return list;
+  function Book(title, author, status, image) {
+    this.title = title;
+    this.author = author;
+    this.status = status;
+    this.image = image;
+  }
+  console.log(books)
+  books.forEach(book =>
+    newBook(
+      book.title, 
+      book.author, 
+      book.status, 
+      book.image
+    )
+  );
 }
 
-// Add the contents of to #book-list:
-document.getElementById('book-list').appendChild(makeUL(Books));
-  
+function newBook(title,author,status,image) {
+  let list = $('#book-list ul')
+  list.append(
+    $("<li/>", {class: `${status}`, text: `${title}, ${author}`})
+      .mouseover(function(){
+          if( status === 'read'){
+            $("#bg img").attr('src', `${image}`)
+          }
+      })
+      .mouseout(function(){
+        $("#bg img").attr('src', 'media/heart.jpg')
+      })
+    )
 }
+
+
 
 // set up write-to google sheets
 var $form = $('form#book-suggestion'),
@@ -77,11 +76,6 @@ document.getElementById("submit-form").onclick = function () {
 }
 
 
-// $("#sidebar_img").hover(function(){
-//   $("#sidebar_img").src="../media/everything.jpg";
-// })
-
-
 
 // fade cover
 
@@ -89,20 +83,23 @@ $(document).ready(function(){
     let img = $("#bg img");
     let text = $("#intro");
     // let title = $('header h1')
-
+    let lastScrollTop = 0;
     let h = window.innerHeight;
     $(window).on('scroll', function () {
         let st = $(this).scrollTop();
         
+        if ( st > lastScrollTop) {
+
+        }
         $('#bg').css({
               'opacity': 1 - st / 300,
-              'margin-left': - (st / 2)
+              'margin-left': - (st / 8)
           })
         
         text.css({
            'opacity': 1 - st / 300
         })
-        if (st > h * .9) {
+        if (st > h) {
           $('#bg').css({
             'width': '30%',
             'opacity': 1,
@@ -110,18 +107,21 @@ $(document).ready(function(){
           })
         }
           
-         else {
+         else if (st < h * .5) {
         //  
           $('#bg').css({
-            
-            'margin-left': - (st / 2)
+            'margin-left': - (st / 8),
+            'opacity': 1 - st / 300
           }, setTimeout(function(){
+           
             $('#bg').css({
               'width': '60%'
-            },0)
-          }))
-        }
 
+            },4000)
+          }))
+
+        }
+        
         
     })
   })
