@@ -26,6 +26,11 @@ h1 {
 }
 
 
+h2 {
+	font-size: 16px;
+	font-weight: 700;
+}
+}
 p {
 	font-size: 14px;
 	line-height: 1.8;
@@ -203,13 +208,15 @@ h1 {
 	color: #FE0066;
 }
 
-.reading::before, .reading::after  {
-	content: url(../media/squiggle.svg);
+.reading::before {
+	content: url(../media/book-pink.svg);
 	position: absolute;
+	width: 15px;
 }
 
 .reading::before {
-	margin-left: -30px;
+	margin-left: -25px;
+	margin-top: -2px;
 }
 .reading::after {
 	margin-left: 5px;
@@ -231,10 +238,14 @@ h1 {
 }
 
 .form {
-	margin-top: 9rem;
+	margin-top: 2rem;
 }
 
-.form {
+.form h2 {
+	grid-column: 5 / span 5;
+}
+
+form {
 	display: grid;
 	grid-column: 5 / span 5;
 	grid-template-columns: repeat(2, 1fr);
@@ -242,14 +253,14 @@ h1 {
 	grid-row-gap: 20px;
 }
 
-.form .input {
+form .input {
 	display: flex;
 	flex-direction: column;
 }
-.form label {
+form label {
 	font-size: 11px;
 }
-.form input {
+form input {
 	height: 50px;
 	border: 1px solid #eee;
 	padding: 1rem;
@@ -257,7 +268,7 @@ h1 {
 	outline: 0px solid transparent;
 }
 
-.form input:focus, #submit-form:active, #submit-form:focus {
+form input:focus, #submit-form:active, #submit-form:focus {
 	outline: 1px solid #1B14F5;
 	/*outline: none;*/
 }
