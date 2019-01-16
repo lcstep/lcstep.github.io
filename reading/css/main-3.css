@@ -64,9 +64,12 @@ footer p {
 	height: 100vh;
 	width: 60%;
 	margin-left: 0;
-	transition: opacity, width, margin-left;
-	transition-duration: .6s, 0s, .6s;
-	transition-delay: 0s, 0s, 0s;
+	transition: opacity, width, margin-left, background;
+	transition-duration: .6s, 0s, .6s, .3s;
+	transition-delay: 0s, 0s, 0s, .3s;
+	background-image: url('../media/heart.jpg');
+	background-size: cover;
+	background-position: top left;
 
 }
 
@@ -145,7 +148,7 @@ h1 {
 
 /*list*/
 
-.list-area  {
+.grid  {
 	display: grid;
 	grid-template-columns: repeat(10, 1fr);
 
@@ -234,7 +237,7 @@ h1 {
 
 form {
 	display: grid;
-	grid-column: 2 / span 6;
+	grid-column: 5 / span 5;
 	grid-template-columns: repeat(2, 1fr);
 	grid-column-gap: 20px;
 	grid-row-gap: 20px;
@@ -261,7 +264,7 @@ form input:focus, #submit-form:active, #submit-form:focus {
 }
 
 #submit-form {
-	grid-column: 2 / span 6;
+	grid-column: 5 / span 5;
 	background: #eee;
 	border: none;
 	color: #1B14F5;
@@ -288,10 +291,11 @@ form input:focus, #submit-form:active, #submit-form:focus {
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
 	#bg {
 		width: 100%;
 		position: absolute;
+
 	}
 
 	#bg img {

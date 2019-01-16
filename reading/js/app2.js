@@ -42,11 +42,11 @@ function newBook(title,author,status,image) {
     $("<li/>", {class: `${status}`, text: `${title}, ${author}`})
       .mouseover(function(){
           if( status === 'read'){
-            $("#bg img").attr('src', `${image}`)
+            $("#bg").css('background-image', 'url('+`${image}`+')')
           }
       })
       .mouseout(function(){
-        $("#bg img").attr('src', 'media/heart.jpg')
+        $("#bg").css('background-image', 'url(https://lcstep.github.io/reading/media/heart.jpg)')
       })
     )
 }
@@ -88,10 +88,8 @@ $(document).ready(function(){
     $(window).on('scroll', function () {
         let st = $(this).scrollTop();
         
-        if ( st > lastScrollTop) {
-
-        }
-        $('#bg').css({
+       if ( $(window).width() > 800) {
+$('#bg').css({
               'opacity': 1 - st / 300,
               'margin-left': - (st / 8)
           })
@@ -121,6 +119,8 @@ $(document).ready(function(){
           }))
 
         }
+       }
+        
         
         
     })
