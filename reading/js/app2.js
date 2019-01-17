@@ -1,10 +1,13 @@
+
+
+
 let sheetData =
-  "https://spreadsheets.google.com/feeds/list/1Qw7VnlojnNQ1Nj6bsAxZqKd5DYFcRkMCZv94bBIZESY/od6/public/values?alt=json";
+"https://spreadsheets.google.com/feeds/list/1Qw7VnlojnNQ1Nj6bsAxZqKd5DYFcRkMCZv94bBIZESY/od6/public/values?alt=json";
 let books = [];
 
 fetch(sheetData)
-  .then(res => res.json())
-  .then(data => render(data));
+.then(res => res.json())
+.then(data => render(data));
 
 function render(data) {
   let entries = data.feed.entry;
@@ -14,16 +17,18 @@ function render(data) {
       book.gsx$title.$t,
       book.gsx$author.$t,
       book.gsx$status.$t,
-      book.gsx$image.$t
-    );
+      book.gsx$image.$t,
+      book.gsx$review.$t
+      );
     books.push(eachBook);
   });
 
-  function Book(title, author, status, image) {
+  function Book(title, author, status, image, review) {
     this.title = title;
     this.author = author;
     this.status = status;
     this.image = image;
+    this.review = review;
   }
   console.log(books)
   books.forEach(book =>
@@ -31,23 +36,72 @@ function render(data) {
       book.title, 
       book.author, 
       book.status, 
-      book.image
-    )
-  );
+      book.image,
+      book.review
+      )
+    );
 }
 
-function newBook(title,author,status,image) {
+function newBook(title,author,status,image,review) {
   let list = $('#book-list ul')
   list.append(
     $("<li/>", {class: `${status}`, text: `${title}, ${author}`})
-      .mouseover(function(){
-          if( status === 'read'){
-            $("#bg").css('background-image', 'url('+`${image}`+')')
-          }
-      })
-      .mouseout(function(){
-        $("#bg").css('background-image', 'url(https://lcstep.github.io/reading/media/heart.jpg)')
-      })
+    .mouseover(function(){
+      if( status === 'read'){
+        $(".list-area aside div").css('background-image', 'url('+`${image}`+')')
+      }
+    })
+    .mouseout(function(){
+               $(".list-area aside div").css('background-image', 'url(https://lcstep.github.io/reading/media/heart.jpg)')
+
+      // if($('.detail').is(':visilbe')){
+      //    $(".list-area aside div").css('background-image', 'url('+`${image}`+')')
+      // } else {
+      //    $(".list-area aside div").css('background-image', 'url(https://lcstep.github.io/reading/media/heart.jpg)')
+
+      // }
+     
+    })
+    .click(function(){
+      if( status === 'read'){
+        
+        $(".list-area aside div").css('background-image', 'url('+`${image}`+')')
+        $('.hero').hide();
+        $('.form').hide();
+        $('footer').hide();
+        $('#book-list').hide();
+        
+
+        $('.list-area').append(
+         $('<div />', {class: 'detail'})
+          .append(
+            $('<a/>', {text: 'x'}).click(function(){
+                $('.detail').hide()
+                $('.hero').fadeIn(300);
+                $('.form').fadeIn(300);
+                $('footer').fadeIn(300);
+                $('#book-list').fadeIn(300);
+                $('.list-area aside').css({
+                  'flex': '30%'
+                })
+                 $(window).scrollTop($('#book-list').offset().top);
+
+            })
+            )
+           .append($('<h1>', {text: `${title}`}))
+           .append($('<h2>', {text: `${author}`}))
+           .append($('<p/>', {text: `${review}`}))
+        .hide()
+        .fadeIn(2000).css("display","flex")
+        )
+        $('.list-area aside').css({
+          'flex': '50%'
+        })
+      }
+    })
+
+
+    
     )
 }
 
@@ -55,7 +109,7 @@ function newBook(title,author,status,image) {
 
 // set up write-to google sheets
 var $form = $('form#book-suggestion'),
-    url = 'https://script.google.com/macros/s/AKfycbx8weRS0fi1STZPKYfvy2WVUnVYwv7FBuIB4yYKi7uBbkOAyPw/exec'
+url = 'https://script.google.com/macros/s/AKfycbx8weRS0fi1STZPKYfvy2WVUnVYwv7FBuIB4yYKi7uBbkOAyPw/exec'
 
 $('#submit-form').on('click', function(e) {
   e.preventDefault();
@@ -67,62 +121,56 @@ $('#submit-form').on('click', function(e) {
     data: $form.serializeObject()
   }).success(
     // do something
-  );
+    );
 })
 
 // clear form after submissions
 document.getElementById("submit-form").onclick = function () {
-    document.getElementById("book-suggestion").reset();
+  document.getElementById("book-suggestion").reset();
 }
 
 
 
 // fade cover
 
+function showAside() {
+  $(".list-area aside").css({
+    'opacity': 1,
+    'transform': 'translateX(0)'
+  })
+}
+
+function hideAside(){
+ $(".list-area aside").css({
+  'transform': 'translateX(-60px)',
+  'opacity': 0
+})
+}
+
 $(document).ready(function(){
-    let img = $("#bg img");
-    let text = $("#intro");
+  let img = $("#bg img");
+  let text = $("#intro");
     // let title = $('header h1')
     let lastScrollTop = 0;
     let h = window.innerHeight;
+
     $(window).on('scroll', function () {
-        let st = $(this).scrollTop();
-        
-       if ( $(window).width() > 800) {
-$('#bg').css({
-              'opacity': 1 - st / 300,
-              'margin-left': - (st / 8)
-          })
-        
-        text.css({
-           'opacity': 1 - st / 300
-        })
-        if (st > h) {
-          $('#bg').css({
-            'width': '30%',
-            'opacity': 1,
-            'margin-left': 0
-          })
-        }
-          
-         else if (st < h * .5) {
-        //  
-          $('#bg').css({
-            'margin-left': - (st / 8),
-            'opacity': 1 - st / 300
-          }, setTimeout(function(){
-           
-            $('#bg').css({
-              'width': '60%'
-
-            },4000)
-          }))
-
-        }
+      let st = $(this).scrollTop();
+      $('#bg').css({
+        'opacity': 1 - st / 300,
+        'margin-left': - (st / 8)
+      })
+      if($(window).width() > 800){
+       if ($('.detail').is(':visible')){
+          // showAside();
+        } else if (st > h) {
+         showAside();
+       } else {
+         hideAside();
        }
-        
-        
-        
-    })
+     }
+
+   })
+
   })
 
