@@ -66,26 +66,27 @@ function newBook(title,author,status,image,review) {
       if( status === 'read'){
         
         $(".list-area aside div").css('background-image', 'url('+`${image}`+')')
-        $('.hero').hide();
+        // $('.hero').hide();
         $('.form').hide();
         $('footer').hide();
         $('#book-list').hide();
-        
+       
 
         $('.list-area').append(
          $('<div />', {class: 'detail'})
           .append(
             $('<a/>', {text: 'x'}).click(function(){
-                $('.detail').hide()
-                $('.hero').fadeIn(300);
+                // $('.hero').show();
+
+                $('#book-list').fadeIn(300);
                 $('.form').fadeIn(300);
                 $('footer').fadeIn(300);
-                $('#book-list').fadeIn(300);
+                $('.detail').fadeOut(300)
+                
+                //$(window).scrollTop($('#book-list').offset().top);
                 $('.list-area aside').css({
                   'flex': '30%'
-                })
-                 $(window).scrollTop($('#book-list').offset().top);
-
+                })   
             })
             )
            .append($('<h1>', {text: `${title}`}))

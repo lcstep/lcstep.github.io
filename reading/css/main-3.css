@@ -207,6 +207,7 @@ h1 {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
+	background:#f7f7f7;
 }
 
 .detail h1 {
