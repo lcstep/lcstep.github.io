@@ -179,11 +179,11 @@ h1 {
 .list-area aside {
 	/*grid-column: 1 / span 3;*/
 	flex: 30%;
-	transform: translateX(-60px);
+	/*transform: translateX(-60px);*/
     opacity: 0;
     transition: opacity .6s ease-in-out,
     			transform .6s ease-in-out,
-    			flex .6s ease-in-out;
+    			flex .3s ease-in-out;
 }
 
 

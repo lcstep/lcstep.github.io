@@ -74,16 +74,18 @@ function newBook(title,author,status,image,review) {
           .append(
             $('<a/>', {text: 'x'}).click(function(){
                 // $('.hero').show();
-
-                $('#book-list').fadeIn(300);
-                $('.form').fadeIn(300);
-                $('footer').fadeIn(300);
-                $('.detail').fadeOut(300)
+                
+                
+                // $('.form').fadeIn(300);
+                // $('footer').fadeIn(300);
+                
                 
                 //$(window).scrollTop($('#book-list').offset().top);
                 $('.list-area aside').css({
                   'flex': '30%'
-                })   
+                })  
+                $('.detail').fadeOut(600) 
+                $('#book-list').fadeIn(600);
             })
             )
            .append($('<h1>', {text: `${title}`}))
