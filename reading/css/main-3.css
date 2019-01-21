@@ -171,7 +171,7 @@ h1 {
 	list-style: none;
 	padding: .7rem 0;
 	line-height: 1.5;
-	cursor: pointer;
+	
 }
 
 
@@ -244,6 +244,7 @@ h1 {
 
 .read {
 	color: #1B14F5;
+	cursor: pointer;
 	/*text-decoration: underline;*/
 	/*text-decoration-skip: edges;*/
 

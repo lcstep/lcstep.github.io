@@ -49,23 +49,20 @@ function newBook(title,author,status,image,review) {
     .mouseover(function(){
       if( status === 'read'){
         $(".list-area aside div").css('background-image', 'url('+`${image}`+')')
+        if ( image === '') {
+           $(".list-area aside div").css('background-image', 'url(media/fallback.jpg)')
+        }
       }
     })
-    .mouseout(function(){
-               $(".list-area aside div").css('background-image', 'url(https://lcstep.github.io/reading/media/heart.jpg)')
-
-      // if($('.detail').is(':visilbe')){
-      //    $(".list-area aside div").css('background-image', 'url('+`${image}`+')')
-      // } else {
-      //    $(".list-area aside div").css('background-image', 'url(https://lcstep.github.io/reading/media/heart.jpg)')
-
-      // }
-     
-    })
+    
     .click(function(){
       if( status === 'read'){
         
         $(".list-area aside div").css('background-image', 'url('+`${image}`+')')
+         if ( image === '') {
+           $(".list-area aside div").css('background-image', 'url(media/fallback.jpg)')
+        }
+
         // $('.hero').hide();
         $('.form').hide();
         $('footer').hide();
@@ -100,7 +97,17 @@ function newBook(title,author,status,image,review) {
         })
       }
     })
+    // .mouseout(function(){
+    //            $(".list-area aside div").css('background-image', 'url(https://lcstep.github.io/reading/media/heart.jpg)')
 
+    //   // if($('.detail').is(':visilbe')){
+    //   //    $(".list-area aside div").css('background-image', 'url('+`${image}`+')')
+    //   // } else {
+    //   //    $(".list-area aside div").css('background-image', 'url(https://lcstep.github.io/reading/media/heart.jpg)')
+
+    //   // }
+     
+    // })
 
     
     )
