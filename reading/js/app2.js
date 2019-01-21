@@ -57,36 +57,13 @@ function newBook(title,author,status,image,review) {
     
     .click(function(){
       if( status === 'read'){
-        
-        $(".list-area aside div").css('background-image', 'url('+`${image}`+')')
-         if ( image === '') {
-           $(".list-area aside div").css('background-image', 'url(media/fallback.jpg)')
-        }
+      
+       hideBookList();
 
-        // $('.hero').hide();
-        $('.form').hide();
-        $('footer').hide();
-        $('#book-list').hide();
-       
-
-        $('.list-area').append(
+       $('.list-area').append(
          $('<div />', {class: 'detail'})
           .append(
-            $('<a/>', {text: 'x'}).click(function(){
-                // $('.hero').show();
-                
-                
-                // $('.form').fadeIn(300);
-                // $('footer').fadeIn(300);
-                
-                
-                //$(window).scrollTop($('#book-list').offset().top);
-                $('.list-area aside').css({
-                  'flex': '30%'
-                })  
-                $('.detail').fadeOut(600) 
-                $('#book-list').fadeIn(600);
-            })
+            $('<a/>', {text: 'x'}).click(function(){hideBookInfo(); })
             )
            .append($('<h1>', {text: `${title}`}))
            .append($('<h2>', {text: `${author}`}))
@@ -94,28 +71,33 @@ function newBook(title,author,status,image,review) {
         .hide()
         .fadeIn(2000).css("display","flex")
         )
-        $('.list-area aside').css({
-          'flex': '50%'
-        })
+        
       }
     })
-    // .mouseout(function(){
-    //            $(".list-area aside div").css('background-image', 'url(https://lcstep.github.io/reading/media/heart.jpg)')
-
-    //   // if($('.detail').is(':visilbe')){
-    //   //    $(".list-area aside div").css('background-image', 'url('+`${image}`+')')
-    //   // } else {
-    //   //    $(".list-area aside div").css('background-image', 'url(https://lcstep.github.io/reading/media/heart.jpg)')
-
-    //   // }
-     
-    // })
+    
 
     
     )
 }
 
+function hideBookList(){
+  
+  $('.form').hide();
+  $('footer').hide();
+  $('#book-list').hide();
+  $('.list-area aside').css({
+          'flex': '50%'
+        })
+}
 
+function hideBookInfo() {
+
+  $('.detail').fadeOut(600) 
+  $('#book-list').fadeIn(600);
+  $('.list-area aside').css({
+          'flex': '30%'
+        })
+}
 
 // set up write-to google sheets
 var $form = $('form#book-suggestion'),
