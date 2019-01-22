@@ -86,8 +86,10 @@ function hideBookList(){
   $('footer').hide();
   $('#book-list').hide();
   $('.list-area aside').css({
-          'flex': '50%'
-        })
+    'flex': '50%'
+  })
+  
+ 
 }
 
 function hideBookInfo() {
@@ -95,8 +97,9 @@ function hideBookInfo() {
   $('.detail').fadeOut(600) 
   $('#book-list').fadeIn(600);
   $('.list-area aside').css({
-          'flex': '30%'
-        })
+    'flex': '30%'
+  })
+  
 }
 
 // set up write-to google sheets
