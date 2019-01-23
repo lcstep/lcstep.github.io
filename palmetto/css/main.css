@@ -16,8 +16,7 @@ html {
 h1 {
 	font-size: 10vh;
 	color: #FFFAF9;
-	z-index: 1;
-	margin: 0;
+	text-align: center;
 	}
 
 h2 {
@@ -28,22 +27,15 @@ h2 {
 
 
 .title {
-	width: 100%;
-	height: 100%;
 	position: fixed;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	align-items: flex-start;
-	z-index: 300;
-	background: rgba(0,0,0,.2);
-	padding: 0 0 4rem 4rem;
+	z-index: 1;
+	align-self: flex-end;
 	}
 
 	.title p {
 		color: #fff;
 		font-family: 'Inconsolata', monospace;
-		z-index: 1;
+		text-align: center;
 		}
 
 	.title a {
@@ -68,9 +60,14 @@ h2 {
 		}
 	
 .cover {
-	/*position: sticky;*/
-	top: 0px;
-	background: #FFFAF9;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	padding: 4rem;
+	
 	}
 	.cover img {
 		width: 100%;
@@ -79,6 +76,14 @@ h2 {
 		position: fixed;
 		opacity: 1;
 		transition: none;
+		}
+
+		.cover img:after {
+			content:'';
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			background: rgba(0,0,0,.3)
 		}
 
 .intro {

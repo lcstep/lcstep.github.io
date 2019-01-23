@@ -33,22 +33,26 @@ $(document).ready(function(){
     var text = $(".title");
     var intro = $(".intro")
      let h = window.innerHeight;
+
     $(window).on('scroll', function () {
+
+        //$('.cover').fadeOut(1000)
         var st = $(this).scrollTop();
-       
-        img.css({
+        $('.cover').css({
             'opacity': 1 - st / 600
         })
-        text.css({
-        	'opacity': 1 - st / 400
+        if (st > h) {
+            $('.cover').css({
+            'pointer-events': 'none'
         })
+        } else {
+            $('.cover').css({
+            'pointer-events': 'auto'
+        })
+        }
         intro.css({
             'opacity': 0 + st / 800
         })
-        if (st > h){
-            // $('.cover').css({
-            //     'display': 'none'
-            // })
-        }
+        
     })
 })
