@@ -32,9 +32,10 @@ $(document).ready(function(){
     var img = $(".cover img");
     var text = $(".title");
     var intro = $(".intro")
+     let h = window.innerHeight;
     $(window).on('scroll', function () {
         var st = $(this).scrollTop();
-        
+       
         img.css({
             'opacity': 1 - st / 600
         })
@@ -44,6 +45,10 @@ $(document).ready(function(){
         intro.css({
             'opacity': 0 + st / 800
         })
-       
+        if (st > h){
+            // $('.cover').css({
+            //     'display': 'none'
+            // })
+        }
     })
 })
