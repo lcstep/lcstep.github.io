@@ -62,8 +62,9 @@ ul li {
 
 ul li p {
 	font-size: 16px;
-	color: #666;
+	color: #fff;
 	margin: 2rem 0;
+	opacity: .6;
 }
 
 
@@ -113,11 +114,17 @@ footer {
 	}
 
 	p {
-		font-size: 16px;
-		line-height: 1.3;
+		/*font-size: 16px;*/
+		/*line-height: 1.3;*/
+		margin: 3rem 0;
 	}
 
 	ul li p {
 		margin: 1.2rem 0;
+	}
+
+	footer {
+		position: static;
+		margin: 2rem 1rem;
 	}
 }
