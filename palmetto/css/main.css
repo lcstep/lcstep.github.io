@@ -206,7 +206,9 @@ img {
 		margin: 0;
 	}
 
-	
+	.cover{
+		padding: 80px;
+	}
 
 	.intro {
 		
