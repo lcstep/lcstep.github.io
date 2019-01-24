@@ -253,6 +253,15 @@ img {
 		grid-column: 1 / span 12;
 		padding: 0;	
 	}
+	footer {
+		flex-direction: column;
+		margin: 1rem 0;
+		padding: 20px;
+	}
+	footer p {
+		width: 80%;
+		margin-right: 0;
+	}
 }
 
 
