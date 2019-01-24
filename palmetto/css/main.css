@@ -215,7 +215,9 @@ img {
 
 
 @media screen and (max-width: 650px) {
-
+	.cover img, .title {
+		position: absolute;
+	}
 
 	h1 {
 		font-size: 6vh;

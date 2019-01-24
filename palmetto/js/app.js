@@ -39,7 +39,7 @@ $(document).ready(function(){
         //$('.cover').fadeOut(1000)
         var st = $(this).scrollTop();
         $('.cover').css({
-            'opacity': 1 - st / 600
+            'opacity': 1 - st / 300
         })
         if (st > h) {
             $('.cover').css({
@@ -51,7 +51,7 @@ $(document).ready(function(){
         })
         }
         intro.css({
-            'opacity': 0 + st / 800
+            'opacity': 0 + st / 600
         })
         
     })
