@@ -223,14 +223,11 @@ img {
 		font-size: 6vh;
 	}
 
-	.title {
-		padding: 0 0 20px 20px;
-	}
+	
 
 	.intro {
-		width: 100%;
-		padding: 0 20px;
-		height: 50vh;
+		
+		height: 90vh;
 	}
 	.intro h2 {
 		padding: 0;
