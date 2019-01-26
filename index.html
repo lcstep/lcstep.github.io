@@ -10,7 +10,7 @@
 <body>
 
 
-  	<video autoplay muted loop playsinline>
+  	<video autoplay muted loop playsinline id="video">
 		<source src="homepage/media/fire.mp4" type="video/mp4">
 	</video>
 	<h1>Laura <br> Stephenson</h1>
@@ -23,15 +23,15 @@
 
 		<ul>
 			<li>
-				<p><a href="little-escape/index.html" target="_blank">Little Escape</a><br>
+				<p><a id="escape" href="little-escape/index.html" target="_blank">Little Escape</a><br>
 				a gallery of videos, desktop only for now</p>
 			</li>
 			<li>
-				<p><a href="palmetto/index.html" target="_blank">Palmetto Street Days</a><br>
+				<p><a id="palmetto" href="palmetto/index.html" target="_blank">Palmetto Street Days</a><br>
 				a photo essay collaboration with Mallika Vora</p>
 			</li>
 			<li>
-				<p><a href="reading/index-3.html" target="_blank">Book Therapy</a><br>
+				<p><a id="books" href="reading/index-3.html" target="_blank">Book Therapy</a><br>
 				A reading list to keep your brain busy, powered by google sheets</p>
 			</li>
 			
@@ -44,5 +44,12 @@
 
 
 <footer>You can see my professional design work <a href="https://www.laura.work" target="blank">here</a>.</footer>
+<!-- <script type="text/javascript">
+	
+	document.getElementById('escape').onMouseOver(function(){
+		document.querySelector('#video > source').src = "little-escape/assets/final/solid-light-1.mp4"
+	})
+
+</script> -->
 </body>
 </html>
