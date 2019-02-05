@@ -43,6 +43,9 @@ function render(data) {
 }
 
 function newBook(title,author,status,image,review) {
+  $('.image-load').append(
+    $('<img />', {src: `${image}`}).css('display', 'none')
+    )
   let list = $('#book-list ul')
   list.append(
     $("<li/>", {class: `${status}`, text: `${title}, ${author}`})
@@ -99,6 +102,8 @@ function hideBookInfo() {
   $('.list-area aside').css({
     'flex': '30%'
   })
+  $('.form').fadeIn(600);
+  $('footer').fadeIn(600);
   
 }
 
