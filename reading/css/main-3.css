@@ -214,6 +214,7 @@ h1 {
 #filter ul {
   top: 5rem;
   position: sticky;
+  position: -webkit-sticky;
   padding: 2rem;
   border: 3px solid #232323;
 }

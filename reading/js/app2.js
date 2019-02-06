@@ -183,10 +183,13 @@ $(document).ready(function() {
 
   $(window).on("scroll", function() {
     let st = $(this).scrollTop();
-    
+    $("#bg").css({
+      opacity: 1 - st / 300
+      
+    });
     if ($(window).width() > 800) {
       $("#bg").css({
-      opacity: 1 - st / 300,
+     
       "margin-left": -(st / 8)
     });
       if ($(".detail").is(":visible")) {
