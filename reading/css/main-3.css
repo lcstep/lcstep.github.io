@@ -63,7 +63,7 @@ p {
 	transition: opacity, width, margin-left, background;
 	transition-duration: .6s, 0s, .6s, .5s;
 	transition-delay: 0s, 0s, 0s, .3s, 0s;
-	background-image: url('../media/heart.jpg');
+	background-image: url('https://lcstep.github.io/reading/media/heart.jpg');
 	background-size: cover;
 	background-position: top left;
 
@@ -155,7 +155,7 @@ h1 {
 }
 #book-list {
 	/*grid-column: 5 / span 4;*/
-	flex: 70%;
+	flex: 50%;
 	margin-top: 10rem;
 	color: #757575;
 	padding: 0;
@@ -167,6 +167,7 @@ h1 {
 
 #book-list ul {
 	padding: 0;
+  min-height: 100vh;
 }
 #book-list ul li {
 	list-style: none;
@@ -188,18 +189,44 @@ h1 {
 }
 
 
-.list-area  aside div {
+.list-area  aside div.image {
 	position: sticky;
     top: 0;
     height: 100vh;
-    background-image: url(../media/heart.jpg);
+    background-image: url('https://lcstep.github.io/reading/media/heart.jpg');
     background-size: cover;
     transition: background-image .3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
-.list-area  aside div img {
+.list-area  aside div.image img {
 	width: 100%;
 }
+
+
+#filter {
+	color:#222;
+  flex: 10%;
+  padding-top: 10rem;
+}
+#filter ul {
+  top: 5rem;
+  position: sticky;
+  padding: 2rem;
+  border: 3px solid #232323;
+}
+#filter li {
+	cursor: pointer;
+  list-style: none;
+  transition: color .3s ease-in-out;
+}
+
+#filter li:hover {
+  color: #1B14F5;
+}
+
 
 .detail {
 	/*grid-column: 5/ span 4;*/
@@ -347,8 +374,11 @@ footer p {
 		padding: 0 4rem;
 	}
 	header {
-		align-self: center;
-		position: static;
+		position: absolute;
+    right: 0;
+    left: 0;
+    justify-content:center;
+    bottom: 10rem;
 		padding: 0;
 	}
 	.hero {
@@ -358,9 +388,20 @@ footer p {
 		justify-content: flex-end;
 
 	}
+  #filter {
+    padding-top: 2rem;
+  }
+  #filter ul {
+    padding: 1rem;
+  }
+  #book-list {
+    flex: 90%;
+    padding: 2rem;
 
-	
-
+  }
+  
+  .list-area aside { display: none; }
+  
 	.grid, .form, form {
 		grid-template-columns: repeat(1, 1fr);
 	}
