@@ -130,7 +130,7 @@ $("#filter ul").on("click", "li", function() {
   $("html, body").animate({
       scrollTop: $("#book-list").offset().top
     },
-    500
+    0
   );
 });
 
