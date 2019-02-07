@@ -82,8 +82,10 @@ function newBook(title, author, status, image, review, category) {
 
           $(".list-area").append(
             $("<div />", { class: "detail" })
+             
+
               .append(
-                $("<a/>", { text: "x" }).click(function() {
+                $("<img/>", { src: "media/close.png", class: "close" }).click(function() {
                   hideBookInfo();
                 })
               )
@@ -94,28 +96,43 @@ function newBook(title, author, status, image, review, category) {
               .fadeIn(2000)
               .css("display", "flex")
           );
+           // $('.list-area aside').prependTo('.detail')
+           // showAside();
         }
       })
   );
 }
 
 function hideBookList() {
+  $(".hero").hide();
   $(".form").hide();
   $("footer").hide();
   $("#book-list").hide();
+  $("#filter").hide();
   $(".list-area aside").css({
     flex: "50%"
   });
+
+
 }
 
 function hideBookInfo() {
-  $(".detail").fadeOut(600);
-  $("#book-list").fadeIn(600);
+  $(".detail").hide();
+  $(".hero").show().css({'opacity': 0});
+
+  $("#book-list").show();
+  scrollToList();
+  $("#filter").fadeIn(600);
+  showAside();
   $(".list-area aside").css({
     flex: "30%"
   });
   $(".form").fadeIn(600);
   $("footer").fadeIn(600);
+  setTimeout(function(){
+     $(".hero").css({'opacity': 1});
+  },600)
+
 }
 
 $("#filter ul").on("click", "li", function() {
@@ -127,12 +144,16 @@ $("#filter ul").on("click", "li", function() {
   if (text == "all") {
     $("#book-list ul li").fadeIn(300);
   }
+  scrollToList();
+});
+
+function scrollToList(){
   $("html, body").animate({
       scrollTop: $("#book-list").offset().top
     },
     0
   );
-});
+}
 
 // set up write-to google sheets
 var $form = $("form#book-suggestion"),
@@ -183,6 +204,11 @@ $(document).ready(function() {
 
   $(window).on("scroll", function() {
     let st = $(this).scrollTop();
+    if (st > h) {
+      $('#filter').css({
+          opacity: 1
+        })
+  }
     $("#bg").css({
       opacity: 1 - st / 300
       
@@ -196,9 +222,15 @@ $(document).ready(function() {
         // showAside();
       } else if (st > h) {
         showAside();
+
       } else {
         hideAside();
       }
-    }
+   } else if ($(window).width() < 800) {
+
+    $('.list-area aside').hide()
+  
+   } 
+
   });
 });
